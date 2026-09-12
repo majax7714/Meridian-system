@@ -1,0 +1,1291 @@
+[
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771778830769
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771779685825
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771779698718
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771817229496
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771817365716
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771857879882
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771858658830
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771859518632
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771861197998
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B+",
+    "confidence": 73.6,
+    "direction": "short",
+    "price": 6866.25,
+    "stopLoss": 6867,
+    "takeProfit": 6864.75,
+    "timestamp": 1771861855309
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771862038347
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.8,
+    "direction": "short",
+    "price": 6865.25,
+    "stopLoss": 6866,
+    "takeProfit": 6863.75,
+    "timestamp": 1771862057416
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 70.8,
+    "direction": "short",
+    "price": 6858.75,
+    "stopLoss": 6859.5,
+    "takeProfit": 6857.25,
+    "timestamp": 1771862075683
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "A",
+    "confidence": 81.8,
+    "direction": "short",
+    "price": 6858.75,
+    "stopLoss": 6859.5,
+    "takeProfit": 6857.25,
+    "timestamp": 1771862095683
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "A",
+    "confidence": 82.8,
+    "direction": "short",
+    "price": 6857.25,
+    "stopLoss": 6858,
+    "takeProfit": 6855.75,
+    "timestamp": 1771862115740
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.4,
+    "direction": "short",
+    "price": 6857.5,
+    "stopLoss": 6858.25,
+    "takeProfit": 6856,
+    "timestamp": 1771862135724
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.2,
+    "direction": "short",
+    "price": 6855.75,
+    "stopLoss": 6856.5,
+    "takeProfit": 6854.25,
+    "timestamp": 1771862155719
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 68.2,
+    "direction": "short",
+    "price": 6855.25,
+    "stopLoss": 6856,
+    "takeProfit": 6853.75,
+    "timestamp": 1771862179132
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 64.2,
+    "direction": "short",
+    "price": 6857.5,
+    "stopLoss": 6858.25,
+    "takeProfit": 6856,
+    "timestamp": 1771862195693
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 71.2,
+    "direction": "short",
+    "price": 6855.25,
+    "stopLoss": 6856,
+    "takeProfit": 6853.75,
+    "timestamp": 1771862215704
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 60.2,
+    "direction": "short",
+    "price": 6857.5,
+    "stopLoss": 6858.25,
+    "takeProfit": 6856,
+    "timestamp": 1771862235674
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 67.2,
+    "direction": "short",
+    "price": 6855.25,
+    "stopLoss": 6856,
+    "takeProfit": 6853.75,
+    "timestamp": 1771862256326
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 64.2,
+    "direction": "short",
+    "price": 6857.5,
+    "stopLoss": 6858.25,
+    "takeProfit": 6856,
+    "timestamp": 1771862276009
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 63.2,
+    "direction": "short",
+    "price": 6857.5,
+    "stopLoss": 6858.25,
+    "takeProfit": 6856,
+    "timestamp": 1771862295750
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.2,
+    "direction": "short",
+    "price": 6854.75,
+    "stopLoss": 6855.5,
+    "takeProfit": 6853.25,
+    "timestamp": 1771862315722
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771862334446
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.2,
+    "direction": "short",
+    "price": 6854.75,
+    "stopLoss": 6855.5,
+    "takeProfit": 6853.25,
+    "timestamp": 1771862335705
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771862349673
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.4,
+    "direction": "short",
+    "price": 6857.5,
+    "stopLoss": 6858.25,
+    "takeProfit": 6856,
+    "timestamp": 1771862356017
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 67.2,
+    "direction": "short",
+    "price": 6857.5,
+    "stopLoss": 6858.25,
+    "takeProfit": 6856,
+    "timestamp": 1771862375993
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "A",
+    "confidence": 76,
+    "direction": "short",
+    "price": 6857.5,
+    "stopLoss": 6858.25,
+    "takeProfit": 6856,
+    "timestamp": 1771862395708
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771862397745
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "C+",
+    "confidence": 50,
+    "direction": "long",
+    "price": 6851.5,
+    "stopLoss": 6851,
+    "takeProfit": 6852.25,
+    "timestamp": 1771862415769
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "C+",
+    "confidence": 54,
+    "direction": "long",
+    "price": 6851.5,
+    "stopLoss": 6851,
+    "takeProfit": 6852.25,
+    "timestamp": 1771862435744
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "C+",
+    "confidence": 47,
+    "direction": "long",
+    "price": 6851.5,
+    "stopLoss": 6851,
+    "takeProfit": 6852.25,
+    "timestamp": 1771862457867
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "C+",
+    "confidence": 51.2,
+    "direction": "long",
+    "price": 6851.5,
+    "stopLoss": 6851,
+    "takeProfit": 6852.25,
+    "timestamp": 1771862478689
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 65,
+    "direction": "short",
+    "price": 6852.75,
+    "stopLoss": 6853.5,
+    "takeProfit": 6851.25,
+    "timestamp": 1771862495720
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 67.8,
+    "direction": "short",
+    "price": 6852.5,
+    "stopLoss": 6853.25,
+    "takeProfit": 6851,
+    "timestamp": 1771862516006
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.8,
+    "direction": "short",
+    "price": 6852,
+    "stopLoss": 6852.75,
+    "takeProfit": 6850.5,
+    "timestamp": 1771862535938
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.8,
+    "direction": "short",
+    "price": 6852.5,
+    "stopLoss": 6853.25,
+    "takeProfit": 6851,
+    "timestamp": 1771862555764
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "C+",
+    "confidence": 49,
+    "direction": "long",
+    "price": 6851.5,
+    "stopLoss": 6851,
+    "takeProfit": 6852.25,
+    "timestamp": 1771862575763
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 71.9,
+    "direction": "short",
+    "price": 6849.75,
+    "stopLoss": 6850.5,
+    "takeProfit": 6848.25,
+    "timestamp": 1771862595721
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 73.6,
+    "direction": "short",
+    "price": 6849.75,
+    "stopLoss": 6850.5,
+    "takeProfit": 6848.25,
+    "timestamp": 1771862615777
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 66.6,
+    "direction": "short",
+    "price": 6849.75,
+    "stopLoss": 6850.5,
+    "takeProfit": 6848.25,
+    "timestamp": 1771862635756
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 71,
+    "direction": "short",
+    "price": 6849.75,
+    "stopLoss": 6850.5,
+    "takeProfit": 6848.25,
+    "timestamp": 1771862655933
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "A",
+    "confidence": 75.4,
+    "direction": "short",
+    "price": 6844.5,
+    "stopLoss": 6845.25,
+    "takeProfit": 6843,
+    "timestamp": 1771862675787
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "A",
+    "confidence": 75.4,
+    "direction": "short",
+    "price": 6844.5,
+    "stopLoss": 6845.25,
+    "takeProfit": 6843,
+    "timestamp": 1771862695833
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 66.7,
+    "direction": "short",
+    "price": 6842.75,
+    "stopLoss": 6843.5,
+    "takeProfit": 6841.25,
+    "timestamp": 1771862715831
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 55.2,
+    "direction": "long",
+    "price": 6842.25,
+    "stopLoss": 6841.75,
+    "takeProfit": 6843,
+    "timestamp": 1771862735790
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 65,
+    "direction": "short",
+    "price": 6842.75,
+    "stopLoss": 6843.5,
+    "takeProfit": 6841.25,
+    "timestamp": 1771862755795
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.2,
+    "direction": "short",
+    "price": 6842.75,
+    "stopLoss": 6843.5,
+    "takeProfit": 6841.25,
+    "timestamp": 1771862776182
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "A",
+    "confidence": 81.8,
+    "direction": "short",
+    "price": 6841,
+    "stopLoss": 6841.75,
+    "takeProfit": 6839.5,
+    "timestamp": 1771862797982
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.2,
+    "direction": "short",
+    "price": 6842.75,
+    "stopLoss": 6843.5,
+    "takeProfit": 6841.25,
+    "timestamp": 1771862815747
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771862832238
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.2,
+    "direction": "short",
+    "price": 6841.25,
+    "stopLoss": 6842,
+    "takeProfit": 6839.75,
+    "timestamp": 1771862835768
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 63,
+    "direction": "short",
+    "price": 6842.75,
+    "stopLoss": 6843.5,
+    "takeProfit": 6841.25,
+    "timestamp": 1771862855795
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 69.2,
+    "direction": "short",
+    "price": 6842.75,
+    "stopLoss": 6843.5,
+    "takeProfit": 6841.25,
+    "timestamp": 1771862875721
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 57.2,
+    "direction": "long",
+    "price": 6842.25,
+    "stopLoss": 6841.75,
+    "takeProfit": 6843,
+    "timestamp": 1771862895716
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 57.2,
+    "direction": "long",
+    "price": 6842.25,
+    "stopLoss": 6841.75,
+    "takeProfit": 6843,
+    "timestamp": 1771862915705
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 71.4,
+    "direction": "short",
+    "price": 6840.75,
+    "stopLoss": 6841.5,
+    "takeProfit": 6839.25,
+    "timestamp": 1771862935745
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.2,
+    "direction": "short",
+    "price": 6842.75,
+    "stopLoss": 6843.5,
+    "takeProfit": 6841.25,
+    "timestamp": 1771862956755
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 70.2,
+    "direction": "short",
+    "price": 6842.75,
+    "stopLoss": 6843.5,
+    "takeProfit": 6841.25,
+    "timestamp": 1771862975737
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.2,
+    "direction": "short",
+    "price": 6842.75,
+    "stopLoss": 6843.5,
+    "takeProfit": 6841.25,
+    "timestamp": 1771862995737
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "C+",
+    "confidence": 53.5,
+    "direction": "long",
+    "price": 6838.25,
+    "stopLoss": 6837.75,
+    "takeProfit": 6839,
+    "timestamp": 1771863015736
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 58.9,
+    "direction": "short",
+    "price": 6838.75,
+    "stopLoss": 6839.5,
+    "takeProfit": 6837.25,
+    "timestamp": 1771863035773
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 64.1,
+    "direction": "short",
+    "price": 6838.75,
+    "stopLoss": 6839.5,
+    "takeProfit": 6837.25,
+    "timestamp": 1771863055809
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 55.1,
+    "direction": "long",
+    "price": 6838.25,
+    "stopLoss": 6837.75,
+    "takeProfit": 6839,
+    "timestamp": 1771863075813
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 71.3,
+    "direction": "short",
+    "price": 6841,
+    "stopLoss": 6841.75,
+    "takeProfit": 6839.5,
+    "timestamp": 1771863096382
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 69.9,
+    "direction": "short",
+    "price": 6840.75,
+    "stopLoss": 6841.5,
+    "takeProfit": 6839.25,
+    "timestamp": 1771863115823
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "A",
+    "confidence": 75.7,
+    "direction": "short",
+    "price": 6839,
+    "stopLoss": 6839.75,
+    "takeProfit": 6837.5,
+    "timestamp": 1771863135799
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771863136596
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 66.9,
+    "direction": "short",
+    "price": 6838.75,
+    "stopLoss": 6839.5,
+    "takeProfit": 6837.25,
+    "timestamp": 1771863155798
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 64.3,
+    "direction": "short",
+    "price": 6837.75,
+    "stopLoss": 6838.5,
+    "takeProfit": 6836.25,
+    "timestamp": 1771863175812
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 57.3,
+    "direction": "long",
+    "price": 6838.25,
+    "stopLoss": 6837.75,
+    "takeProfit": 6839,
+    "timestamp": 1771863195827
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 63.1,
+    "direction": "short",
+    "price": 6837,
+    "stopLoss": 6837.75,
+    "takeProfit": 6835.5,
+    "timestamp": 1771863215805
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "C+",
+    "confidence": 46.3,
+    "direction": "long",
+    "price": 6838.25,
+    "stopLoss": 6837.75,
+    "takeProfit": 6839,
+    "timestamp": 1771863235911
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "C+",
+    "confidence": 51.3,
+    "direction": "long",
+    "price": 6838.25,
+    "stopLoss": 6837.75,
+    "takeProfit": 6839,
+    "timestamp": 1771863255839
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 60.9,
+    "direction": "short",
+    "price": 6838.75,
+    "stopLoss": 6839.5,
+    "takeProfit": 6837.25,
+    "timestamp": 1771863275829
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 71.3,
+    "direction": "short",
+    "price": 6837,
+    "stopLoss": 6837.75,
+    "takeProfit": 6835.5,
+    "timestamp": 1771863295852
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.7,
+    "direction": "short",
+    "price": 6837,
+    "stopLoss": 6837.75,
+    "takeProfit": 6835.5,
+    "timestamp": 1771863315875
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 64.9,
+    "direction": "short",
+    "price": 6837,
+    "stopLoss": 6837.75,
+    "takeProfit": 6835.5,
+    "timestamp": 1771863335838
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771863358525
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 74.7,
+    "direction": "short",
+    "price": 6836.5,
+    "stopLoss": 6837.25,
+    "takeProfit": 6835,
+    "timestamp": 1771863365910
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 66.5,
+    "direction": "short",
+    "price": 6836.5,
+    "stopLoss": 6837.25,
+    "takeProfit": 6835,
+    "timestamp": 1771863385955
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.5,
+    "direction": "short",
+    "price": 6836.5,
+    "stopLoss": 6837.25,
+    "takeProfit": 6835,
+    "timestamp": 1771863407265
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B+",
+    "confidence": 73.2,
+    "direction": "short",
+    "price": 6840.5,
+    "stopLoss": 6841.5,
+    "takeProfit": 6838.5,
+    "timestamp": 1771863412547
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 58.7,
+    "direction": "short",
+    "price": 6836.5,
+    "stopLoss": 6837.25,
+    "takeProfit": 6835,
+    "timestamp": 1771863435926
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 58.7,
+    "direction": "short",
+    "price": 6836.25,
+    "stopLoss": 6837,
+    "takeProfit": 6834.75,
+    "timestamp": 1771863456262
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 66.5,
+    "direction": "short",
+    "price": 6836.5,
+    "stopLoss": 6837.25,
+    "takeProfit": 6835,
+    "timestamp": 1771863476169
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 66.8,
+    "direction": "short",
+    "price": 6836.5,
+    "stopLoss": 6837.25,
+    "takeProfit": 6835,
+    "timestamp": 1771863495886
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.3,
+    "direction": "short",
+    "price": 6836.5,
+    "stopLoss": 6837.25,
+    "takeProfit": 6835,
+    "timestamp": 1771863515920
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 73.5,
+    "direction": "short",
+    "price": 6836.5,
+    "stopLoss": 6837.25,
+    "takeProfit": 6835,
+    "timestamp": 1771863535872
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.9,
+    "direction": "short",
+    "price": 6836.5,
+    "stopLoss": 6837.25,
+    "takeProfit": 6835,
+    "timestamp": 1771863555892
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.9,
+    "direction": "short",
+    "price": 6836.5,
+    "stopLoss": 6837.25,
+    "takeProfit": 6835,
+    "timestamp": 1771863575886
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 66.5,
+    "direction": "short",
+    "price": 6836.5,
+    "stopLoss": 6837.25,
+    "takeProfit": 6835,
+    "timestamp": 1771863595868
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 62.9,
+    "direction": "short",
+    "price": 6845.25,
+    "stopLoss": 6846,
+    "takeProfit": 6843.75,
+    "timestamp": 1771863615890
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 66.7,
+    "direction": "short",
+    "price": 6845.25,
+    "stopLoss": 6846,
+    "takeProfit": 6843.75,
+    "timestamp": 1771863635878
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.1,
+    "direction": "short",
+    "price": 6845.25,
+    "stopLoss": 6846,
+    "takeProfit": 6843.75,
+    "timestamp": 1771863655870
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 62.3,
+    "direction": "short",
+    "price": 6845.25,
+    "stopLoss": 6846,
+    "takeProfit": 6843.75,
+    "timestamp": 1771863675872
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.1,
+    "direction": "short",
+    "price": 6847.25,
+    "stopLoss": 6848,
+    "takeProfit": 6845.75,
+    "timestamp": 1771863815913
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 63.3,
+    "direction": "short",
+    "price": 6848,
+    "stopLoss": 6848.75,
+    "takeProfit": 6846.5,
+    "timestamp": 1771863845925
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 62.4,
+    "direction": "short",
+    "price": 6847.25,
+    "stopLoss": 6848,
+    "takeProfit": 6845.75,
+    "timestamp": 1771863865903
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 60.1,
+    "direction": "short",
+    "price": 6847.25,
+    "stopLoss": 6848,
+    "takeProfit": 6845.75,
+    "timestamp": 1771863885902
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 64.3,
+    "direction": "short",
+    "price": 6847.25,
+    "stopLoss": 6847.75,
+    "takeProfit": 6846.25,
+    "timestamp": 1771863955962
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 61.3,
+    "direction": "short",
+    "price": 6849.75,
+    "stopLoss": 6850.5,
+    "takeProfit": 6848.25,
+    "timestamp": 1771863975922
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 62.1,
+    "direction": "short",
+    "price": 6847.25,
+    "stopLoss": 6847.75,
+    "takeProfit": 6846.25,
+    "timestamp": 1771864025964
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 62.1,
+    "direction": "short",
+    "price": 6847.25,
+    "stopLoss": 6847.75,
+    "takeProfit": 6846.25,
+    "timestamp": 1771864045907
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 58.1,
+    "direction": "short",
+    "price": 6847.25,
+    "stopLoss": 6847.75,
+    "takeProfit": 6846.25,
+    "timestamp": 1771864065913
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 71.9,
+    "direction": "short",
+    "price": 6853.5,
+    "stopLoss": 6854.25,
+    "takeProfit": 6852,
+    "timestamp": 1771864105936
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.1,
+    "direction": "short",
+    "price": 6847.25,
+    "stopLoss": 6847.75,
+    "takeProfit": 6846.25,
+    "timestamp": 1771864135955
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771864154848
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.1,
+    "direction": "short",
+    "price": 6847.25,
+    "stopLoss": 6847.75,
+    "takeProfit": 6846.25,
+    "timestamp": 1771864156970
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 60.6,
+    "direction": "short",
+    "price": 6847.25,
+    "stopLoss": 6847.75,
+    "takeProfit": 6846.25,
+    "timestamp": 1771864175923
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 60.9,
+    "direction": "short",
+    "price": 6847.25,
+    "stopLoss": 6847.75,
+    "takeProfit": 6846.25,
+    "timestamp": 1771864205999
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 58.5,
+    "direction": "short",
+    "price": 6858.25,
+    "stopLoss": 6859,
+    "takeProfit": 6856.75,
+    "timestamp": 1771864225950
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 58.5,
+    "direction": "short",
+    "price": 6858.25,
+    "stopLoss": 6859,
+    "takeProfit": 6856.75,
+    "timestamp": 1771864266017
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B+",
+    "confidence": 65.7,
+    "direction": "short",
+    "price": 6858.25,
+    "stopLoss": 6859,
+    "takeProfit": 6856.75,
+    "timestamp": 1771864286988
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 59.7,
+    "direction": "short",
+    "price": 6858.25,
+    "stopLoss": 6859,
+    "takeProfit": 6856.75,
+    "timestamp": 1771864335983
+  },
+  {
+    "reason": "REJECTED",
+    "grade": "B",
+    "confidence": 59.7,
+    "direction": "short",
+    "price": 6856,
+    "stopLoss": 6856.75,
+    "takeProfit": 6854.5,
+    "timestamp": 1771864466047
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771866567745
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771866940045
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771873838244
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771874285321
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771876653823
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771876898966
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771878432446
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771878438851
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771878638575
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771879097655
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "C+",
+    "confidence": 46,
+    "direction": "short",
+    "price": 6850.75,
+    "stopLoss": 6851.75,
+    "takeProfit": 6848.75,
+    "timestamp": 1771879339913
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771879801236
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771881152422
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771881550498
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771881935930
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771882048520
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771893252584
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771893663683
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771968849139
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771970017650
+  },
+  {
+    "reason": "TIMEOUT",
+    "grade": "B",
+    "confidence": 58,
+    "direction": "LONG",
+    "timestamp": 1771970199276
+  }
+]

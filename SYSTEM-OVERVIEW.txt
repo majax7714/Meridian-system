@@ -1,0 +1,930 @@
+================================================================================
+  Meridian System — System Overview
+  Version 18.6.0 | Node.js | February 2026
+================================================================================
+
+This document is a complete walkthrough of the system's architecture, logic,
+and external resources, written for someone seeing this project for the first
+time.  It covers what every module does, why each piece was built the way it
+was, and cites every academic paper and data source the engine references.
+
+--------------------------------------------------------------------------------
+PART 1 — WHAT THIS SYSTEM IS
+--------------------------------------------------------------------------------
+
+This is an autonomous futures scalping bot for the TopstepX prop trading
+platform.  It trades the Micro E-mini S&P 500 (MES) — a CME contract whose
+tick size is 0.25 index points, each tick worth $1.25.
+
+"Autonomous" means it runs entirely unattended.  After `node index.js` you
+press nothing; the system authenticates, selects the front-month contract,
+connects to a live quote stream, and begins a decision loop that fires every
+10 seconds.  Each cycle gathers data from multiple sources, scores the market
+environment, votes on direction, and either places a bracketed limit order or
+stands aside.
+
+The system was designed specifically for a TopstepX "combine" or funded account,
+where drawdown limits impose discipline the way a trading desk risk manager
+would.  Daily loss and trade-count caps are enforced in software.
+
+Key statistics:
+  - Loop frequency:   10 seconds
+  - Max daily trades: 10 (configurable)
+  - Max daily loss:   $500 (configurable)
+  - Instrument:       MES (Micro E-mini S&P 500), auto-rolling each quarter
+  - Platform API:     TopstepX REST + SignalR (Microsoft real-time hub)
+  - NLP model:        FinBERT TRC2 (BERT-based, 418 MB, runs locally via ONNX)
+  - AI assistant:     Claude API (Anthropic, used for analysis support)
+
+Live testing status: The system has been verified through offline unit tests
+(83 tests, all passing), module load checks, and backtesting runs.  Live
+session cycles have been observed with confidence scores ranging from 29–69
+points.  The system has not yet accumulated the 30–50 tagged live trades
+needed for the adaptive learning loops (signal reliability, regime win rates,
+false-negative rate) to produce meaningful adjustments.
+
+--------------------------------------------------------------------------------
+PART 2 — STARTUP FLOW (index.js)
+--------------------------------------------------------------------------------
+
+When you run `node index.js`, six initialization steps run in sequence before
+the trading loop starts:
+
+  Step 1 — Database init
+    The JSON file store (data/settings.json) is created if absent.  No external
+    database is required; everything is flat-file JSON.
+
+  Step 2 — Rollover warning
+    A hardcoded ROLLOVER_SCHEDULE list maps dates to contract IDs
+    (CON.F.US.MES.H26, .M26, .U26, .Z26, .H27).  If a rollover is within 7
+    days, a warning is printed.  If today is past a rollover date, the new
+    contract is selected automatically.  No manual config change is needed.
+
+  Step 3 — Authentication
+    A REST call to the TopstepX API authenticates with email/password/apiKey.
+    If authentication returns errorCode 7 (meaning the user has not accepted
+    a new legal agreement on the website), a headless Chromium browser is
+    launched via Puppeteer (browser-login.js) to accept the agreement
+    automatically, then auth is retried.
+
+  Step 4 — Account load
+    The active account ID is fetched and stored.  All order API calls require
+    this ID.
+
+  Step 5 — Contract selection
+    The list of tradeable contracts is fetched.  The system picks the MES
+    front-month contract whose ID matches the rollover schedule.  Falls back
+    to alphabetically first MES contract, then to any first contract.
+
+  Step 6 — Start automation
+    Control passes to automation.js which establishes the SignalR quote stream
+    and begins the 10-second cycle loop.  A SIGINT/SIGTERM handler cancels any
+    open limit order before the process exits.
+
+--------------------------------------------------------------------------------
+PART 3 — THE TWO TRADE PATHS
+--------------------------------------------------------------------------------
+
+Every cycle evaluates two independent trade setups.  They are not mutually
+exclusive — either or neither may fire in a given cycle.
+
+  PATH A — Momentum Scalp
+    Premise: when a sufficient set of technical, macro, and microstructure
+    signals agree on direction and confidence exceeds the dynamic threshold,
+    price is likely to continue in that direction for the duration of a
+    short-term scalp.
+
+    Entry: bracketed limit order placed at the current bid (for LONG) or ask
+    (for SHORT), with stop-loss and take-profit calculated in advance by
+    realized-volatility.js.
+
+    Threshold:  base (55/52/48 depending on data availability)
+                + RV/IV regime adjustment (±3)
+                + adaptive regime adjustment (±3 from trade history)
+                + session phase adjustment (0, +10, or +15)
+
+  PATH B — VWAP Mean Reversion
+    Premise: when price has moved more than 1σ away from the session VWAP
+    (anchored at the 8:30 CT open), it is statistically likely to revert.
+    The direction of the trade is always toward VWAP.
+
+    Entry condition:
+      - Session VWAP z-score ≥ 1σ (uses session VWAP anchored at 8:30 CT)
+      - No active catalyst (news event) blocking trading
+      - Confidence ≥ lower Path B threshold (45/43/40 + adjustments)
+
+    The VWAP displacement is measured using realized σ, not a fixed point
+    count, so the threshold naturally tightens in low-volatility regimes
+    and relaxes in high-volatility ones.
+
+--------------------------------------------------------------------------------
+PART 4 — CYCLE FLOW (automation.js, every 10 seconds)
+--------------------------------------------------------------------------------
+
+Every 10 seconds, runScalpingCycle() executes this pipeline:
+
+  1. Catalyst gate (catalyst-filter.js)
+     Fetch the week's economic calendar and check for high-impact events.
+     If a major news release is within its pre-event window → HARD BLOCK.
+     If within post-event window → decayed penalty applied to confidence score.
+     Passes catalystContext (penalty + layer weights + direction bias +
+     directionWeight) into the scorer so post-event effects are granular,
+     not binary.
+
+  2. Session gate (intraday-cycle.js)
+     If the current CT time is before 8:30 AM (PRE_MARKET) or after 2:45 PM
+     (AFTER_HOURS) → skip cycle.  These represent the TopstepX cutoffs.
+
+  3. Bar fetch (topstepx.js)
+     Four timeframes of bar data are fetched via curl:
+       1-second bars  → used for tick precision and order flow
+       1-minute bars  → used for tick momentum cross-checks
+       5-minute bars  → used for trend, VWAP, macro regime scoring
+       15-minute bars → used for multi-timeframe alignment scoring
+     Bars arrive newest-first from the API.
+
+  4. Realized σ (realized-volatility.js)
+     Standard deviation of log returns over the last 20 five-minute bars.
+     Used for: vol regime classification, stop/target sizing, VWAP displacement
+     thresholding (Path B), and RV/IV ratio.
+
+  5. Live quote (quote-stream.js)
+     Latest bid/ask from the SignalR hub.  Real-time tick-level price when
+     the stream is connected; null if disconnected.
+
+  6. Quote buffer (quote-stream.js)
+     A rolling 300-quote, 60-second window of all bid/ask ticks.  Used by
+     tick-precision.js for Lee-Ready order flow classification when 1s bars
+     are sparse.  Also used to compute live spread.
+
+  7. Macro context (macro-context.js, 1-hour cache)
+     Fetches live VIX and VIX3M from Yahoo Finance.
+     Derives: VIX trend (rolling 3-reading slope), VIX term structure
+     (BACKWARDATION vs CONTANGO), regime classification (PASSIVE_DOMINATED
+     vs ACTIVE_DOMINATED), and the CFTC COT dealer signal.
+
+  8. Cross-asset context (cross-asset.js, 5-min cache)
+     Fetches 5m bars for NQ (Nasdaq-100 futures), Gold (GC=F), Bitcoin
+     (BTC-USD), and Crude Oil (CL=F) from Yahoo Finance.
+     Computes: NQ/ES divergence signal (6 states) and a multi-asset risk
+     sentiment composite (-5 to +5).
+
+  9. Session bar delta
+     Net count of 5m bars with higher close than open vs bars with lower close,
+     since the 8:30 CT session open.  ≥+5 = institutional accumulation bias;
+     ≤-5 = distribution bias.  Accumulated cumulatively across the session.
+
+  10. Confidence score (scalping-intelligence.js)
+      Full 6-layer scoring run (see Part 5 below).
+      All context gathered in steps 1–9 is passed into this function.
+
+  11. RV/IV ratio (realized-volatility.js)
+      Compares today's realized vol to VIX-implied vol to classify whether the
+      market is trending (RV > IV) or ranging (RV < IV).  Uses a 5-reading
+      smoother — the regime only shifts when ≥3 of the last 5 readings agree.
+      TRENDING → threshold −3 for Path A, +3 for Path B (momentum favored).
+      RANGING  → threshold +3 for Path A, −3 for Path B (mean reversion favored).
+
+  12. Dynamic threshold computation
+      pathABase = scaledBase (55/52/48) + RV/IV adjustment + adaptive adjustment
+      pathBBase = scaledBase (45/43/40) + RV/IV adjustment + adaptive adjustment
+      adjustedThreshold = pathABase + session phase adjustment
+
+  13. Path A check
+      If confidence ≥ adjustedThreshold and direction is set → place scalp.
+
+  14. Path B check
+      If session VWAP z-score ≥ 1σ, no catalyst blocking, confidence ≥ path B
+      threshold → place VWAP reversion scalp.
+
+  15. Trade execution (if either path fires)
+      A limit order is placed at bid (LONG) or ask (SHORT).
+      A fill monitor polls the order status every 2 seconds.
+      On fill: position monitor begins, managing break-even stop, trailing stop,
+      time-based exit, SL/TP, and forced close.
+
+--------------------------------------------------------------------------------
+PART 5 — THE CONFIDENCE SCORER (scalping-intelligence.js)
+--------------------------------------------------------------------------------
+
+The 0–100 confidence score is built from six layers.  Layers 1–5 are applied
+before direction is known.  Several post-direction adjustments then modify the
+score once the vote resolves.
+
+  LAYER 1: MACRO (0–15 pts + COT ±3 pts)
+    - PASSIVE_DOMINATED regime: up to 15 pts (regime.confidence / 6.67)
+    - ACTIVE_DOMINATED regime: −5 pts penalty
+    The COT dealer signal (±3 pts) is applied post-direction (see below).
+
+  LAYER 2: FUTURES (0–10 pts pre-direction + up to 15 pts post-direction)
+    Pre-direction:
+      - Delta imbalance (BULLISH_IMBALANCE or BEARISH_IMBALANCE): +10 pts
+    Post-direction:
+      - Basis arbitrage: +7 pts (aligned with direction) or −3 pts (opposing)
+      - Price discovery: +8 pts only when ES acceleration magnitude aligns
+        with the trade direction (signed: positive = ES accelerating up)
+      - 0DTE gamma: +3 pts on Wednesday/Friday 3–4 PM window when dealers
+        are maximally hedging gamma
+
+  LAYER 3: MICRO (0–25 pts)
+    - 5m trend strength: 0–12 pts (move size + bar consistency, last 12 bars)
+    - 15m alignment: +8 pts when 5m and 15m trend directions agree
+    - Phase-normalized volume: +5 pts when volume exceeds phase baseline by
+      > 20% (phase normalization prevents midday quiet sessions from being
+      penalized relative to higher-volume morning/afternoon periods)
+
+  LAYER 4: TICK (0–30 pts + structural bonuses, −5 penalty)
+    Source priority: 1s bars → quote buffer → TICK unavailable.
+    - Real-time order flow (Lee-Ready): 0–12 pts based on buy/sell pressure
+    - Delta divergence: −2 to −5 pts when price trend and order flow contradict
+    - Tick momentum: 0–10 pts
+    - Price acceleration (ACCELERATING/PARABOLIC): 0–8 pts
+    - POC proximity: +3 pts if price is at/within 0.25 pts of the Point of
+      Control (highest-volume level); +1 pt within 0.75 pts
+    - Key tick level: +2 pts if price is at a high-frequency touch level
+    - Low-volume node: +4 pts if price is in a thin zone (fast moves likely)
+
+  LAYER 5: EXECUTION (0–18 pts)
+    - Live spread liquidity: 0–5 pts from SignalR spread; bar-range fallback
+    - Vol regime: +5 pts for LOW_VOL or MEDIUM_VOL (predictable for scalping)
+    - VWAP alignment: +4 pts (trending away from VWAP = momentum); +3 pts
+      (extreme displacement = reversion setup)
+    - 0DTE gamma: +3 pts (same condition as Layer 2; applies here as execution
+      amplifier)
+
+  CONVERGENCE BONUS (+10 pts)
+    When ≥75% of the 5 FAST signals agree on direction.
+    Fast signals: 5m trend, 15m trend, futures delta, tick order flow, tick
+    momentum.  Slow macro signals are intentionally excluded to prevent the
+    bonus from inflating on slow-moving data.
+
+  POST-DIRECTION ADJUSTMENTS (after direction vote)
+    The direction vote uses all 12 named signals:
+      Fast (5):  5m trend, 15m trend, futures delta, tick order flow, tick momentum
+      Slow (7):  COT dealer, VIX trend, NQ divergence, risk sentiment composite,
+                 VIX term structure, session bar delta, cumulative tick delta
+
+    After the majority-vote direction is established:
+    - COT dealer alignment: ±3 pts
+    - Basis arbitrage: applied here (+7 or −3)
+    - Price discovery: +8 if aligned, 0 if not
+    - CROSS_ASSET layer: NQ signal ±4–8 pts, risk sentiment ±3–6 pts
+    - VIX term structure alignment: +2 pts if confirmed
+    - Session bar delta alignment: ±2 pts
+    - Cumulative tick delta alignment: ±3 pts
+    - CATALYST layer: per-layer score reductions (MACRO/TICK/FUTURES/MICRO)
+      proportional to remaining event influence; aligned-bias bonus (+1/+2/+3)
+      if trade follows the event's directional signal (see FinBERT section below)
+
+  The result is clipped to [0, 100], then graded A+/A/B+/B/C+/C.
+
+--------------------------------------------------------------------------------
+PART 6 — FINBERT UTILIZATION (catalyst-filter.js + scalping-intelligence.js)
+--------------------------------------------------------------------------------
+
+FinBERT TRC2 runs locally on each economic event title and returns three class
+probabilities: positive / negative / neutral (financial journalism tone).
+
+The original implementation discarded the probability scores after the argmax
+label was identified, passing only the label string ("positive" / "negative" /
+"neutral") into resolveDirectionBias().  The aligned-bias bonus was always a
+fixed +3 points regardless of how confident the model actually was.  This meant
+a headline where FinBERT returned { positive: 0.52, neutral: 0.40, negative: 0.08 }
+received identical treatment to one with { positive: 0.91, neutral: 0.05, negative: 0.04 }.
+
+The current implementation uses the full probability output:
+
+  Weight calculation (catalyst-filter.js — resolveDirectionBias):
+    weight = confidence × (1 − neutralProb)
+    - confidence: probability of the winning directional class
+    - (1 − neutralProb): discount factor — a high neutral probability means
+      the model is hedging, so the directional signal is less trustworthy
+    - Example: positive=0.87, neutral=0.08 → weight = 0.87 × 0.92 = 0.80 (strong)
+    - Example: positive=0.55, neutral=0.38 → weight = 0.55 × 0.62 = 0.34 (weak)
+    - If the dominant class is 'neutral', weight = 0 (no directional inference)
+
+  Scaled bonus (scalping-intelligence.js — CATALYST layer):
+    weight ≥ 0.65 → +3 pts   (high-confidence directional read)
+    weight ≥ 0.45 → +2 pts   (moderate confidence)
+    weight ≥ 0.25 → +1 pt    (weak but non-negligible signal)
+    weight < 0.25 → +0 pts   (model too uncertain; skip the bonus)
+
+  The directionWeight value is carried in the catalystContext object returned
+  by isCatalystWindow() so the scorer has access to it each cycle.
+
+  Backward compatibility: if catalystContext.directionWeight is absent (e.g.,
+  from a cached context created before this change), it defaults to 1.0,
+  which preserves the prior +3 behavior.
+
+--------------------------------------------------------------------------------
+PART 7 — MODULE DESCRIPTIONS (src/)
+--------------------------------------------------------------------------------
+
+  automation.js  (~1509 lines)
+    The main control loop.  Orchestrates all data gathering, calls
+    calculateScalpingConfidence(), computes dynamic thresholds, evaluates
+    Path A and Path B, places and monitors orders.
+    Also manages:
+      - Daily trade and loss limit enforcement
+      - Cycle guard flag (prevents overlapping cycles)
+      - Streak circuit breaker (3 consecutive losses → 60-min pause)
+      - Open position recovery on restart (reads last active trade from DB)
+      - Break-even stop (moves SL to entry ±1 tick at +1R excursion)
+      - Trail stop (activates at +1.5R, trails max(0.5σ, 0.5R) behind price)
+      - Time-based exit (5-minute max hold via market order)
+      - Spread hard gate (spread > 0.50 → no entry)
+      - Near-miss logging (cycles within 10 pts of threshold → data/near-misses.json)
+
+  scalping-intelligence.js  (~955 lines)
+    Implements calculateScalpingConfidence().  Contains the full 6-layer scorer,
+    12-signal direction vote, all helper functions (calculateTrendStrength,
+    calculateVWAPRelationship, calculateSessionVWAP, analyzeVolumeProfile,
+    assessLiquidity, calculateRecentVolatility, detectDeltaDivergence).
+    Returns a rich object: confidence, grade, direction, shouldScalp,
+    stopDistance, targetDistance, allSignals, breakdown, convergenceRatioRaw.
+
+  catalyst-filter.js  (~405 lines)
+    Fetches weekly economic calendar from faireconomy.media (4-hour cache).
+    Classifies each event into one of 12 taxonomy categories via regex patterns.
+    Computes: surprise factor, exponential decay penalty, FinBERT-derived
+    direction bias with probability-weighted confidence score (directionWeight),
+    per-layer score weights.
+    Implements isCatalystWindow(lookaheadMinutes) as the main API.
+
+  finbert.js  (~213 lines)
+    Local FinBERT TRC2 inference.  Implements:
+      - BERT WordPiece tokenizer in pure JavaScript (from vocab.txt, 30,522 tokens)
+      - ONNX inference via onnxruntime-node (no Python at runtime)
+      - Input: economic event title string
+      - Output: { sentiment, confidence, positive, negative, neutral }
+        where all four numeric fields are used by catalyst-filter.js
+      - Cached per title (Map) to avoid re-running identical headlines
+      - warmup() pre-loads the ONNX session at startup to avoid cold-start latency
+    Inference latency: ~30ms per text on CPU.
+
+  macro-context.js  (~869 lines)
+    Fetches live VIX (^VIX) and VIX3M (^VIX3M) from Yahoo Finance (1-hour cache).
+    Derives: VIX rolling slope from 3-reading history (RISING >+0.3, FALLING <-0.3),
+    VIX term structure (BACKWARDATION when VIX/VIX3M > 1, CONTANGO when < 1).
+    Constructs macroData: regime, passiveFlowWindow, COT signal, Fed rate, VIX data.
+    References Jiang-Vayanos-Zheng (2025), Chinco-Sammon (2022), Ben-David (2018)
+    for passive flow theory.
+
+  futures-mechanics.js  (~528 lines)
+    Computes three ES futures-specific signals each cycle:
+      - Basis: compares ES futures price to live SPX spot fetched from Yahoo Finance.
+        FUTURES_CHEAP when futures < spot (arb buyers expected → bullish tailwind).
+        FUTURES_RICH when futures > spot.  Applied post-direction (+7/−3).
+      - Delta imbalance: up-tick vs down-tick ratio from bar data (+10 pre-direction).
+      - Price discovery: rate of change of ES vs SPX over recent bars.
+        Signed magnitude (positive = ES accelerating up).  +8 pts when aligned.
+      - 0DTE gamma pressure: flags the Wed/Fri 3–4 PM window when zero-days-to-
+        expiration option hedging creates mechanical flow (+3 pts).
+
+  tick-precision.js  (~768 lines)
+    Extracts microstructure signals from high-frequency data.
+    Source hierarchy: 1s bars (preferred) → quote buffer → insufficient.
+    Computes:
+      - Order flow: Lee-Ready tick rule classification of buys vs sells.
+        Net delta, buy/sell ratio, AGGRESSIVE_BUYING/SELLING signals.
+      - Momentum: consecutive tick direction streaks, acceleration detection.
+      - Volume profile: Point of Control (POC), low-volume nodes (LVN).
+      - Tick levels: price levels with high touch frequency (S/R detection).
+      - Live spread: bid-ask spread from SignalR quote; scored 0–5 pts.
+      - Spread trend: TIGHTENING / STABLE / WIDENING classification.
+
+  cross-asset.js  (~520 lines)
+    Fetches 5m bars for NQ=F, GC=F (Gold), BTC-USD, CL=F (Oil) from Yahoo Finance
+    (5-minute cache).  Computes:
+      - NQ/ES divergence: 6-state signal (NQ_LEADING_BULLISH, NQ_LEADING_BEARISH,
+        RISK_ON_CONFIRMED, RISK_OFF_CONFIRMED, DIVERGING, SECTOR_ROTATION, NEUTRAL).
+        Uses 15-min and 1-hour momentum windows.
+      - Risk sentiment composite: −5 to +5 score from Gold (safe-haven signal),
+        Bitcoin (speculative risk appetite), and Oil (macro/inflation signal).
+    Academic basis is cited inline; see Part 8 for full citations.
+
+  realized-volatility.js  (~163 lines)
+    Computes σ as standard deviation of log returns over 20 five-minute bars.
+    Provides:
+      - classifyVolRegime(sigma): LOW / MEDIUM / HIGH / SPIKE
+      - volProportionalStops(sigma, price): stop and target in ticks (4–10t range)
+      - vwapDisplacementCheck(price, vwap, sigma): σ-scaled displacement for Path B
+      - computeRVIVRatio(sigma, vix): compares daily realized vol to daily VIX-implied
+        vol.  TRENDING when ratio > 1.3; RANGING when ratio < 0.8.
+        NOTE: The RANGING threshold was calibrated to 0.8 (not 0.7) based on Carr &
+        Wu (2008), who document that VIX structurally exceeds realized vol by ~3–5
+        volatility points in normal markets.  At 0.7 the RANGING regime fired too
+        rarely, under-activating Path B.  Raising to 0.8 accounts for this premium.
+    Uses ln(current/prev) log returns throughout, consistent with standard
+    financial volatility estimation.
+
+  intraday-cycle.js  (~142 lines)
+    Maps current CT time to a session phase with a threshold adjustment:
+      PRE_MARKET    (before 8:30 CT)  → +99 pts (effectively blocked)
+      OPEN_RUSH     (8:30–9:30 CT)   → +10 pts (volatile, raise bar)
+      MIDMORNING    (9:30–11:00 CT)  → +0 pts  (prime window)
+      MIDDAY_CHOP   (11:00–13:00 CT) → +15 pts (quiet, raise bar significantly)
+      CLOSE_RUSH    (13:00–14:45 CT) → +0 pts  (prime window)
+      AFTER_HOURS   (after 14:45 CT) → +99 pts (effectively blocked)
+    Also returns volumeExpectation (relative to average) for phase-normalized
+    volume scoring in the MICRO layer.
+    Academic basis: Admati & Pfleiderer (1988) U-shaped intraday volume theory.
+
+  cot-data.js  (~138 lines)
+    Downloads CFTC Traders in Financial Futures (TFF) report via the Socrata
+    public API.  Extracts S&P 500 Consolidated rows (newest 52 weeks).
+    Computes:
+      - Dealer net (long contracts − short contracts)
+      - 52-week percentile of current net vs history
+      - Signal: DEALERS_LONG (≥70th pctile), DEALERS_SHORT (≤30th pctile),
+        or DEALERS_NEUTRAL
+    Cache TTL: 7 days (report updates every Friday ~3:30 PM ET).
+    Applied post-direction: ±3 pts in the confidence scorer.
+
+  topstepx.js  (~483 lines)
+    REST client for the TopstepX API.  All HTTP calls use curl via
+    child_process.execSync — node-fetch has authentication issues with this API.
+    Provides: authenticate(), getActiveAccount(), getContracts(), fetchBars(),
+    placeOrder(), cancelOrder(), getOrderStatus(), closePosition().
+
+  quote-stream.js  (~184 lines)
+    Microsoft SignalR connection to the TopstepX live quote hub.
+    Subscribes to GatewayQuote events for the active contract.
+    Maintains:
+      - Latest bid/ask snapshot (getLatestQuote())
+      - Rolling 300-quote, 60-second buffer (getQuoteBuffer(windowMs))
+      - Quote age in milliseconds (getQuoteAge()) for staleness detection
+    JWT expiry is decoded and the connection is refreshed before token expires.
+
+  claude.js  (~65 lines)
+    Thin Anthropic API client.  Sends a message to Claude (claude-sonnet-4-6)
+    and returns the response text.  Used for optional analytical support.
+
+  db.js  (~781 lines)
+    All persistent storage in JSON files under data/.
+    Files: settings.json (all key-value settings + caches),
+           trades.json (trade history, ~50 fields per record),
+           near-misses.json (500-entry ring of cycles within 10 pts of threshold),
+           passed-scalps.json (200-entry ring of blocked setups).
+    Analytics functions: getWinRateByRegime, getWinRateByPath,
+    getWinRateByConfidenceBucket, getAdaptiveRegimeAdjustments (loads ±3 threshold
+    adjustments based on win rate by regime), getSignalReliability (per-signal win
+    rate from named allSignals array), getNearMissProfile, getPassedScalpProfile,
+    getFalseNegativeRate.
+
+  browser-login.js
+    Puppeteer (headless Chromium) login handler.  Fires only when TopstepX returns
+    errorCode 7, meaning the user must accept a pending legal agreement.
+    Navigates to the login page, fills credentials, accepts agreements, and returns.
+
+  backtest.js
+    Replay-based backtester.  Loads historical MES and NQ 5m bars from Yahoo Finance,
+    runs the MICRO and CROSS_ASSET scoring layers, and reports win-rate by confidence
+    bucket, by regime, and by signal.  Use: `npm run backtest` (2000 bars) or
+    `npm run backtest:large` (5000 bars).
+
+--------------------------------------------------------------------------------
+PART 8 — ACADEMIC LITERATURE REFERENCED IN THE ENGINE
+--------------------------------------------------------------------------------
+
+Every paper listed below is cited in the source code in the module where it is
+used.  The CALIBRATION-ROADMAP.md document contains detailed notes on how each
+finding maps to specific parameters and what parameter changes the literature
+suggests.
+
+  1. Lucca, D. and Moench, E. (2015)
+     "The Pre-FOMC Announcement Drift"
+     Journal of Finance, Vol. 70, No. 1, pp. 329–371.
+     https://doi.org/10.1111/jofi.12196
+     Finding: ES/SPY earns ~50 basis points on average in the 24 hours before
+     FOMC announcements, concentrated starting ~3 PM ET the prior day.
+     Usage: informs the FED_DECISION pre-event window parameter (currently 60m
+     hard block) and motivates a potential pre-drift direction signal.
+
+  2. Savor, P. and Wilson, M. (2013)
+     "How Much Do Investors Care About Macroeconomic Risk? Evidence from
+     Scheduled Economic Announcements"
+     Journal of Financial Economics, Vol. 108, No. 2, pp. 370–392.
+     Finding: Markets earn excess returns on FOMC, CPI, and employment
+     announcement days.  Post-NFP price discovery lasts approximately 20–40
+     minutes.
+     Usage: validates EMPLOYMENT_TIER1 post-window of 45m and the general
+     rationale for having hard catalyst windows at all.
+
+  3. Gürkaynak, R., Sack, B. and Swanson, E. (2005)
+     "Do Actions Speak Louder Than Words? The Response of Asset Prices to
+     Monetary Policy Actions and Statements"
+     International Journal of Central Banking, Vol. 1, No. 1, pp. 55–93.
+     Finding: CPI surprises produce immediate, persistent price moves.
+     Volatility clustering after CPI persists 45–75 minutes.  Hot inflation
+     prints show stronger persistence (asymmetric effect).
+     Usage: informs INFLATION_TIER1 decay half-life (60m) and motivates a
+     higher surprise multiplier for INVERSE-direction events.
+
+  4. Whaley, R. (2009)
+     "Understanding the VIX"
+     Journal of Portfolio Management, Vol. 35, No. 3, pp. 98–105.
+     Finding: VIX spikes (>5pt single-day moves) revert with a half-life of
+     approximately 3–5 trading days.  Single-session spikes do not persist.
+     Usage: validates that the VIX rolling slope (last 3 hourly readings) is
+     measuring intraday behavior correctly.  VIX slope thresholds (>0.3 RISING,
+     <-0.3 FALLING) confirmed as reasonable.
+
+  5. Carr, P. and Wu, L. (2008)
+     "Variance Risk Premiums"
+     Review of Financial Studies, Vol. 22, No. 3, pp. 1311–1341.
+     Finding: Implied vol (VIX) systematically exceeds realized vol by ~3–5
+     volatility points on average — the variance risk premium.
+     Usage: directly informed the calibration of the RV/IV RANGING threshold.
+     The original threshold (ratio < 0.7) fired too rarely in normal markets
+     because the structural IV > RV premium keeps the ratio below 1.0 most of
+     the time even when the market is genuinely quiet.  The threshold was raised
+     to ratio < 0.8 to account for this premium, making Path B (mean reversion)
+     active in appropriately calm environments.
+
+  6. Admati, A. and Pfleiderer, P. (1988)
+     "A Theory of Intraday Patterns: Volume and Price Variability"
+     Review of Financial Studies, Vol. 1, No. 1, pp. 3–40.
+     Finding: Informed traders concentrate at the open and close, producing
+     the empirically observed U-shaped intraday volume and volatility profile.
+     Usage: directly justifies intraday-cycle.js session phase thresholds.
+     OPEN_RUSH and CLOSE_RUSH are prime windows; MIDDAY_CHOP +15 adjustment
+     reflects lower liquidity and directionality during midday.
+
+  7. Jiang, W., Vayanos, D. and Zheng, L. (2025)
+     "Passive Ownership and Market Efficiency"
+     NBER Working Paper, referenced in macro-context.js.
+     Finding: Increasing passive ownership creates predictable flow patterns
+     around rebalancing events.
+     Usage: underpins the PASSIVE_DOMINATED / ACTIVE_DOMINATED regime
+     classification and the MACRO layer scoring rationale.
+
+  8. Chinco, A. and Sammon, M. (2022)
+     "The Passive Ownership Share Is Double What You Think It Is"
+     Journal of Financial Economics, Vol. 151, pp. 103749.
+     Finding: Passive ownership share is larger than commonly measured, with
+     implications for order flow predictability.
+     Usage: cited in macro-context.js to support the regime classification
+     and passive flow window logic.
+
+  9. Ben-David, I. (2018)
+     Multiple works on ETF arbitrage and mechanical flow.
+     Cited in macro-context.js for passive flow regime theory.
+
+  10. Barberis, N., Shleifer, A. and Wurgler, J. (2005)
+      "Comovement"
+      Journal of Financial Economics, Vol. 75, No. 2, pp. 283–317.
+      Finding: Stocks added to an index start co-moving more with other index
+      members due to mechanical index membership effects.
+      Usage: cited in cross-asset.js to justify tracking NQ alongside ES.
+      Both are equity indices with overlapping institutional ownership.
+
+  11. Baur, D. and Lucey, B. (2010)
+      "Is Gold a Hedge or a Safe Haven? An Analysis of Stocks, Bonds and Gold"
+      Financial Review, Vol. 45, No. 2, pp. 217–229.
+      Finding: Gold acts as a safe haven for stocks during extreme market stress
+      but is a hedge on average.
+      Usage: cited in cross-asset.js for the Gold safe-haven signal.  The risk
+      sentiment composite penalizes LONG trades when gold is rising significantly
+      without ES participation.
+
+  12. Bouri, E. et al. (2020)
+      "Bitcoin and Global Financial Stress: A Copula-Based Approach to
+      Dependence and Causality in the Tail"
+      Finance Research Letters, Vol. 31.
+      Finding: Bitcoin co-moves with growth equities during risk-on regimes
+      and de-correlates during risk-off — a speculative risk-appetite indicator.
+      Usage: cited in cross-asset.js for the BTC risk sentiment signal.
+
+  13. Hamilton, J. (2009)
+      "Causes and Consequences of the Oil Shock of 2007–08"
+      Brookings Papers on Economic Activity, Vol. 2009, No. 1, pp. 215–261.
+      Finding: Oil price spikes historically precede recessions.
+      Usage: cited in cross-asset.js for the Oil signal.  A spike without ES
+      participation suggests a supply shock — equities headwind.
+
+  14. Kilian, L. and Park, C. (2009)
+      "The Impact of Oil Price Shocks on the US Stock Market"
+      International Economic Review, Vol. 50, No. 4, pp. 1267–1287.
+      Finding: Demand-driven oil increases are equity-positive; supply-shock-
+      driven increases are equity-negative.
+      Usage: cited in cross-asset.js; distinguishes scenarios by checking
+      whether ES is also rising alongside oil (demand-driven) or falling.
+
+  15. Lee, C. and Ready, M. (1991)
+      "Inferring Trade Direction from Intraday Data"
+      Journal of Finance, Vol. 46, No. 2, pp. 733–746.
+      The Lee-Ready algorithm: classify a trade as a buy if the price is above
+      the midpoint, a sell if below.
+      Usage: tick-precision.js's calculateOrderFlowFromQuotes() uses this
+      algorithm to classify order flow direction from the 300-quote buffer
+      when 1-second bars are unavailable.
+
+  16. Devlin, J. et al. (2018)
+      "BERT: Pre-training of Deep Bidirectional Transformers for Language
+      Understanding"
+      NAACL 2019 (arXiv:1810.04805).
+      Usage: FinBERT is built on BERT-base-uncased architecture.
+      finbert.js implements the WordPiece tokenizer and BERT input format
+      (CLS / SEP tokens, attention mask, token type IDs) as described here.
+
+  17. Yang, Y. et al. (2020)
+      "FinBERT: A Pretrained Language Model for Financial Communications"
+      arXiv:2006.08097.
+      This is the FinBERT TRC2 variant fine-tuned on the Thomson Reuters News
+      Corpus (TRC2) for financial journalism sentiment classification.
+      Labels: positive / negative / neutral (financial tone).
+      Usage: finbert.js loads the TRC2 weights (pytorch_model.bin, 418MB)
+      converted to ONNX format.  All four output values (positive, negative,
+      neutral probabilities and argmax confidence) are used by catalyst-filter.js
+      to compute a weighted directional bias (see Part 6 for full details).
+      HuggingFace model card: https://huggingface.co/ProsusAI/finbert
+
+--------------------------------------------------------------------------------
+PART 9 — EXTERNAL DATA SOURCES AND APIs
+--------------------------------------------------------------------------------
+
+Every external resource the engine touches at runtime is listed here.
+
+  1. TopstepX REST API
+     URL base: https://gateway.topsteptrader.com/
+     Auth endpoint: POST /api/Account/loginKey (apiKey + email + password)
+     Bars endpoint: GET /api/History/retrieveBars
+     Orders endpoint: POST /api/Order/place, GET /api/Order/{id}, DELETE /api/Order/{id}
+     Data: OHLCV bars (1s / 1m / 5m / 15m), account info, contract list, order status
+     Protocol: curl via child_process.execSync (not node-fetch — auth issues)
+
+  2. TopstepX SignalR Real-Time Hub
+     Library: @microsoft/signalr v8 (npm package)
+     Hub: wss://gateway.topsteptrader.com/rtc
+     Event: GatewayQuote(contractId, data) → bestBid, bestAsk
+     Method: SubscribeContractQuotes(contractId)
+     Data: live bid/ask ticks for the subscribed MES contract
+     Reconnect: JWT expiry decoded from token; reconnect triggered before expiry
+
+  3. Yahoo Finance — Intraday Quote API (v8/finance/chart)
+     URL template: https://query1.finance.yahoo.com/v8/finance/chart/{SYMBOL}?interval=5m&range=1d
+     Symbols used:
+       ^VIX     — CBOE Volatility Index (live spot, macro-context.js)
+       ^VIX3M   — 3-month VIX (term structure, macro-context.js)
+       ^GSPC    — S&P 500 Cash Index (basis computation, futures-mechanics.js)
+       NQ%3DF   — Nasdaq-100 Futures (cross-asset NQ divergence)
+       GC%3DF   — Gold Futures (safe-haven signal)
+       BTC-USD  — Bitcoin/USD (speculative risk appetite)
+       CL%3DF   — Crude Oil Futures (macro/inflation signal)
+     Cache TTL: 1 hour (VIX), 5 minutes (intraday bars)
+     Access: free, no API key required; rate-limited; uses curl with User-Agent header
+     Note: fetchYahooHistorical() is synchronous (execSync) — never use .catch() on it
+
+  4. CFTC Public Reporting Environment (Socrata API)
+     URL: https://publicreporting.cftc.gov/resource/gpe5-46if.json
+     Query: TFF report, S&P 500 Consolidated rows, newest 52 weeks, ordered DESC
+     Column names: lowercase_with_underscores (dealer_positions_long_all, etc.)
+     Data: Dealer/Intermediary long and short open interest in S&P 500 futures
+     Update frequency: Every Friday ~3:30 PM ET with prior Tuesday's data
+     Cache TTL: 7 days (cot-data.js)
+     Access: free, no API key, public government data
+
+  5. faireconomy.media Economic Calendar
+     URL: https://nfs.faireconomy.media/ff_calendar_thisweek.json
+     Data: weekly economic calendar (date, title, country, impact, actual, forecast, previous)
+     Used by: catalyst-filter.js to identify High-impact events ±30 min
+     Cache TTL: 4 hours
+     Access: free, no API key required
+
+  6. Anthropic Claude API
+     Library: Anthropic SDK (via api/claude.js)
+     Model: claude-sonnet-4-6
+     Usage: optional analytical support; not required for the trading loop to run
+
+  7. FinBERT Model (local, no network call at inference)
+     Source weights: model/finbert/pytorch_model.bin (418 MB)
+     Inference weights: model/finbert/onnx/model.onnx (418 MB, converted via convert.js)
+     Vocabulary: model/finbert/vocab.txt (30,522 BERT WordPiece tokens)
+     Runtime library: onnxruntime-node (npm, CPU provider)
+     No Python dependency at runtime; all inference is in Node.js via finbert.js
+     Model origin: ProsusAI/finbert (HuggingFace) — TRC2 variant
+     HuggingFace model card: https://huggingface.co/ProsusAI/finbert
+
+--------------------------------------------------------------------------------
+PART 10 — SAFETY AND RISK MANAGEMENT MECHANISMS
+--------------------------------------------------------------------------------
+
+  Daily limits (checked every cycle)
+    - maxDailyTrades (default 10): stops all trading for the rest of the day
+    - maxDailyLoss (default $500): stops all trading if realized loss exceeds limit
+    Both limits reset at midnight CT.
+
+  Cycle guard
+    A boolean flag (cycleRunning) prevents a new cycle from starting if the
+    previous cycle is still executing.  Avoids race conditions if a network
+    call hangs for longer than 10 seconds.
+
+  Quote age logging
+    getQuoteAge() is checked each cycle.  If no quote has arrived for more than
+    30 seconds, a warning is logged including the age and connection status.
+
+  Streak circuit breaker
+    After 3 consecutive losses, trading pauses for 60 minutes.
+    consecutiveLosses counter resets on a win or on a new trading day.
+
+  Spread hard gate
+    If the live bid-ask spread exceeds 0.50 index points at entry time,
+    the order is blocked regardless of confidence score.
+
+  Open position recovery
+    On every scalp fill, the active trade record is saved to DB
+    (db.saveActiveTrade).  On startup, db.getActiveTrade() is checked.
+    If an unresolved position is found, startScalpPositionMonitoring() is
+    called immediately, so the bot continues managing an existing position
+    even after a restart.
+
+  hasOpenOrder force-clear failsafe
+    If the fill monitor times out without detecting a fill or cancel, the
+    order state is forcibly cleared (inActiveTrade=false) regardless of whether
+    the cancel API call succeeded.  Prevents the bot from locking itself out.
+
+  Break-even stop
+    When price moves +1R in favor (R = initial stop distance), the stop-loss
+    is moved to entry ±1 tick to lock in breakeven.
+
+  Trailing stop
+    Activates when price reaches +1.5R in favor.  Trails max(0.5σ, 0.5R) behind
+    the best price seen during the trade.  Only tightens — never relaxes.
+
+  Time-based exit
+    Maximum hold time is 5 minutes (300 seconds) per trade.  After timeout,
+    a market close order is placed regardless of profit/loss.
+
+  Near-miss logging
+    Any cycle where confidence came within 10 points of the entry threshold
+    (but did not fire) is saved to data/near-misses.json.  This 500-entry ring
+    buffer feeds the getFalseNegativeRate() analytical function.
+
+  MFE/MAE tracking
+    Maximum Favorable Excursion and Maximum Adverse Excursion are tracked every
+    2 seconds during a live trade and saved to the trade record for later
+    analysis of whether stops and targets are sized correctly.
+
+--------------------------------------------------------------------------------
+PART 11 — DATA STORAGE SCHEMA
+--------------------------------------------------------------------------------
+
+All storage is flat-file JSON under data/.  No external database required.
+
+  data/settings.json
+    Key-value store for everything.  Keys include:
+      sessionToken, activeAccountId, selectedContractId
+      vixPrice, vixTimestamp, vixHistory (rolling 3 readings)
+      vix3mPrice, vix3mTimestamp
+      economicCalendar (serialized JSON + fetchedAt timestamp)
+      cotData (serialized JSON + fetchedAt timestamp)
+      initialized, lastDayReset, dailyTrades, dailyPnL
+      automationState (cumulativeDelta, lastQuoteTs, sessionDate)
+      consecutiveLosses, streakPauseUntil
+      rvivHistory (last 5 RV/IV ratio readings for smoothing)
+      adaptiveRegimeAdjustments (win-rate-derived threshold tweaks)
+      nq_bars, gold_bars, btc_bars, oil_bars (cached Yahoo bar data)
+
+  data/trades.json
+    Array of ~50-field trade records.  Key fields:
+      entryTime, exitTime, path (A/B), direction (LONG/SHORT)
+      entryPrice, exitPrice, pnl, outcome (WIN/LOSS)
+      confidence, grade, regime, phase
+      stopDistance, targetDistance, exit_reason (SL/TP/TIME/TRAIL/BREAKEVEN_STOP)
+      mfe (max favorable excursion), mae (max adverse excursion)
+      allSignals (named vote array for per-signal win rate tracking)
+      layerScores (macro/futures/micro/tick/execution/crossAsset breakdown)
+      vwap, futuresContext, crossAssetContext (full snapshot at entry)
+
+  data/near-misses.json
+    Ring buffer (max 500 entries) of cycles that came within 10 points of the
+    threshold but did not fire.  Used by getNearMissProfile() and
+    getFalseNegativeRate() for pre-live calibration analysis.
+
+  data/passed-scalps.json
+    Ring buffer (max 200 entries) of setups that met confidence threshold but
+    were blocked for a reason (spread too wide, catalyst gate, daily limit, etc.).
+
+  learning-data/
+    JSON files for Claude-assisted pattern storage.  Grow over time.
+    Not required for the trading engine to operate.
+
+--------------------------------------------------------------------------------
+PART 12 — TECHNOLOGY STACK
+--------------------------------------------------------------------------------
+
+  Runtime:      Node.js 18–22 LTS  (avoid Node 25 due to better-sqlite3)
+  Language:     JavaScript (CommonJS modules)
+  Key packages:
+    @microsoft/signalr ^8.0.0  — real-time quote stream
+    onnxruntime-node ^1.24.2   — FinBERT ONNX inference (no Python needed)
+    puppeteer ^22.0.0          — headless browser for auth errorCode 7
+    chalk ^4.1.2               — terminal color output
+    express ^4.18.2            — local HTTP (not used in trading loop)
+    node-fetch ^2.7.0          — available but not used for TopstepX API calls
+  Storage:      JSON flat files (no SQLite, no external DB)
+  Network:      curl via child_process.execSync for TopstepX and Yahoo calls
+  Model:        FinBERT TRC2, 418 MB, ONNX format, CPU inference ~30ms/text
+
+--------------------------------------------------------------------------------
+PART 13 — CONTRACT DETAILS
+--------------------------------------------------------------------------------
+
+  Instrument:     Micro E-mini S&P 500 (MES)
+  Exchange:       CME Group
+  Tick size:      0.25 index points
+  Tick value:     $1.25 per tick
+  Contract size:  1/10th of standard E-mini (ES)
+  Trading hours:  Sunday 5PM ET – Friday 4PM ET (Globex); this system trades
+                  only 8:30 AM – 2:45 PM CT (regular session)
+  Rollover:       Quarterly; auto-handled by ROLLOVER_SCHEDULE in index.js
+                  Next rollover: March 16, 2026 (H26 → M26)
+
+  Why MES and not ES?
+    TopstepX combine accounts typically allow MES with a smaller account size.
+    The $1.25 tick value means a 4-tick stop on a $5900 MES = $5.00 risk per
+    trade — appropriate for a small combine.  The full ES contract would be
+    $12.50 per tick = $50 risk on the same stop width.
+
+--------------------------------------------------------------------------------
+PART 14 — HOW TO RUN
+--------------------------------------------------------------------------------
+
+  Prerequisites:
+    Node.js 18–22 LTS
+    npm install
+    Valid TopstepX credentials in config.js
+    Valid Anthropic API key in config.js (optional — only used by claude.js)
+    FinBERT ONNX model at model/finbert/onnx/model.onnx (already committed)
+
+  Start the system:
+    node index.js
+
+  Test individual modules offline (no broker connection needed):
+    npm run test:unit          # 83-test offline suite (all passing)
+    npm run backtest           # MICRO+CA replay on 2000 historical bars
+    npm run backtest:large     # Same on 5000 bars
+
+  Test live connectivity:
+    npm run test:auth          # Authenticate and print token prefix
+    npm run test:rollover      # Verify contract rollover logic (7 test cases)
+
+  Verify all modules load without errors:
+    node -e "require('./src/storage/db'); require('./src/engine/catalyst-filter'); require('./src/engine/finbert'); require('./src/engine/automation'); console.log('OK')"
+
+  Test FinBERT locally:
+    node -e "require('./src/engine/finbert').classify('Non-Farm Payrolls beat expectations').then(r => console.log(r.sentiment, r.confidence, 'neutral:', r.neutral))"
+
+  Test catalyst gate live:
+    node -e "require('./src/engine/catalyst-filter').isCatalystWindow(30).then(r => console.log(r.blocked ? 'BLOCKED' : 'clear', '| bias:', r.directionBias, '| weight:', r.directionWeight))"
+
+  Stop:
+    Ctrl+C — graceful shutdown; cancels any open limit order before exit
+
+--------------------------------------------------------------------------------
+PART 15 — KNOWN LIMITATIONS AND FUTURE WORK
+--------------------------------------------------------------------------------
+
+  Parameter calibration
+    Most numerical parameters (decay half-lives, layer weights, confidence
+    thresholds, convergence ratios) were set by domain knowledge, not empirical
+    measurement.  CALIBRATION-ROADMAP.md documents two pre-live initiatives:
+    empirical decay fitting from historical ES/event data, and academic literature
+    synthesis.  The RV/IV RANGING threshold and FinBERT weighting have been
+    updated based on this analysis (see Parts 5 and 6); other parameters remain
+    as domain-knowledge priors pending 20+ trades per category.
+
+  Live trading data requirement
+    The adaptive loops (getAdaptiveRegimeAdjustments, getSignalReliability,
+    getFalseNegativeRate) cannot be fed by any offline data source.  They need
+    30–50 live tagged trades before the adjustments converge meaningfully.
+    Until then, adaptive adjustments default to zero and hasEnoughData = false.
+
+  FinBERT temperature calibration
+    The FinBERT ONNX model outputs raw logits → softmax probabilities.  The
+    probability-weighted approach (Part 6) is a significant improvement over
+    the fixed-bonus approach, but the model itself has not been temperature-
+    scaled or calibrated specifically for event-title-to-ES-direction inference.
+    Platt scaling or isotonic regression on a labeled held-out set could improve
+    the reliability of the weight values.  This requires building a labeled
+    dataset (event titles + ES directional outcomes), which will be available
+    once 50+ post-event trade records have accumulated.
+
+  Overnight / Globex session
+    Session gate is a hard CT clock gate.  Globex trades from ~5 PM CT Sunday
+    are not accessible.  Extending to overnight would require new phases in
+    intraday-cycle.js and calibration of thresholds for lower-liquidity
+    conditions.
+
+  No live trade history yet
+    As of v18.6.0 the system has passed all offline validation: 83 unit tests,
+    module load checks, live cycle observations (29–69 point scores observed),
+    and backtesting runs.  The core hypothesis — that the confidence score
+    predicts outcomes at the chosen threshold — requires live tagged trade
+    records to validate.  All adaptive calibration pathways are in place and
+    ready to activate once trading begins.
+
+================================================================================
+END OF DOCUMENT
+================================================================================

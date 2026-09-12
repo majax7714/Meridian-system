@@ -1,0 +1,3021 @@
+[
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771777650258
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771777675084
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771777710765
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771778830769
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771779685824
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771779698718
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771779698718
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771779698718
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771779698718
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771817229495
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771817229496
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771817229496
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771817229496
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771817365715
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771817365716
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771817365716
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771817365716
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771857879882
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771857879883
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771857879883
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771857879883
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771858658830
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771858658831
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771858658831
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771858658831
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771859518631
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771859518632
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771859518632
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771859518633
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771861197998
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771861197998
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771861197998
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771861197999
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862038347
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862038348
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862038348
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862038348
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862334445
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862334446
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862334446
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862334446
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862349672
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862349673
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862349673
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862349673
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862397745
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862397746
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862397746
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862397746
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862832238
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862832239
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862832239
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771862832239
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771863136595
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771863136596
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771863136596
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771863136596
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771863358525
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771863358526
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771863358526
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771863358526
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771864154847
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771864154848
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771864154849
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771864154849
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771866567745
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771866567746
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771866567746
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771866567746
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771866940045
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771866940046
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771866940046
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771866940046
+  },
+  {
+    "confidence": 36.6,
+    "thresholdA": 70,
+    "thresholdB": 45,
+    "gap": 8.399999999999999,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "NEUTRAL",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771866990474
+  },
+  {
+    "confidence": 35.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 6.600000000000001,
+    "direction": null,
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867010416
+  },
+  {
+    "confidence": 35.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 6.600000000000001,
+    "direction": null,
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867020404
+  },
+  {
+    "confidence": 41.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 0.6000000000000014,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867030392
+  },
+  {
+    "confidence": 38.8,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 3.200000000000003,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867080394
+  },
+  {
+    "confidence": 35,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 7,
+    "direction": null,
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867090404
+  },
+  {
+    "confidence": 35,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 7,
+    "direction": null,
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867100434
+  },
+  {
+    "confidence": 36,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 6,
+    "direction": null,
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867170422
+  },
+  {
+    "confidence": 41.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 0.6000000000000014,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867260411
+  },
+  {
+    "confidence": 40.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 1.6000000000000014,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867310430
+  },
+  {
+    "confidence": 36.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 5.600000000000001,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867350405
+  },
+  {
+    "confidence": 36.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 5.600000000000001,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867360406
+  },
+  {
+    "confidence": 40.2,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 1.7999999999999972,
+    "direction": null,
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867430454
+  },
+  {
+    "confidence": 32.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 9.600000000000001,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867470435
+  },
+  {
+    "confidence": 41.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 0.6000000000000014,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867490453
+  },
+  {
+    "confidence": 37.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 4.600000000000001,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867500445
+  },
+  {
+    "confidence": 40,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 2,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867560476
+  },
+  {
+    "confidence": 39,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 3,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771867590528
+  },
+  {
+    "confidence": 33.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 8.399999999999999,
+    "direction": null,
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869314017
+  },
+  {
+    "confidence": 40.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 1.3999999999999986,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869384016
+  },
+  {
+    "confidence": 38.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 3.3999999999999986,
+    "direction": null,
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869414026
+  },
+  {
+    "confidence": 33.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 8.399999999999999,
+    "direction": null,
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869424031
+  },
+  {
+    "confidence": 35.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 6.399999999999999,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869554043
+  },
+  {
+    "confidence": 32.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 9.600000000000001,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869574069
+  },
+  {
+    "confidence": 37.2,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 4.799999999999997,
+    "direction": "SHORT",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869584027
+  },
+  {
+    "confidence": 38,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 4,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869604132
+  },
+  {
+    "confidence": 33.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 8.600000000000001,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869614217
+  },
+  {
+    "confidence": 32.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 9.399999999999999,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869704133
+  },
+  {
+    "confidence": 37.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 4.399999999999999,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869714204
+  },
+  {
+    "confidence": 41.2,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 0.7999999999999972,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869724173
+  },
+  {
+    "confidence": 40.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 1.3999999999999986,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869734117
+  },
+  {
+    "confidence": 39.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 2.3999999999999986,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869794114
+  },
+  {
+    "confidence": 36.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 5.399999999999999,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869824523
+  },
+  {
+    "confidence": 41.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 0.3999999999999986,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869835104
+  },
+  {
+    "confidence": 40.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 1.3999999999999986,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869864131
+  },
+  {
+    "confidence": 36.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 5.399999999999999,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771869894115
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771873838244
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771873838245
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771873838245
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771873838245
+  },
+  {
+    "confidence": 41.9,
+    "thresholdA": 55,
+    "thresholdB": 45,
+    "gap": 3.1000000000000014,
+    "direction": "SHORT",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "NEUTRAL",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771874141242
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771874285320
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771874285322
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771874285322
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771874285322
+  },
+  {
+    "confidence": 44.5,
+    "thresholdA": 55,
+    "thresholdB": 45,
+    "gap": 0.5,
+    "direction": "SHORT",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "NEUTRAL",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771874342861
+  },
+  {
+    "confidence": 36.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.799999999999997,
+    "direction": "SHORT",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771874531071
+  },
+  {
+    "confidence": 41.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 0.20000000000000284,
+    "direction": "SHORT",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771874571093
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771876653823
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771876653824
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771876653824
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771876653824
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771876898965
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771876898967
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771876898967
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771876898967
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878432445
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878432447
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878432447
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878432447
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878438850
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878438852
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878438852
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878438852
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878638574
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878638576
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878638576
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771878638576
+  },
+  {
+    "confidence": 37.6,
+    "thresholdA": 55,
+    "thresholdB": 45,
+    "gap": 7.399999999999999,
+    "direction": null,
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "NEUTRAL",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771878696141
+  },
+  {
+    "confidence": 42.8,
+    "thresholdA": 55,
+    "thresholdB": 45,
+    "gap": 2.200000000000003,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "NEUTRAL",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771878699973
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771879097655
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771879097656
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771879097656
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771879097657
+  },
+  {
+    "confidence": 40.9,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.1000000000000014,
+    "direction": "SHORT",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771879348656
+  },
+  {
+    "confidence": 34.5,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 7.5,
+    "direction": null,
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771879388613
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771879801235
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771879801237
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771879801237
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771879801237
+  },
+  {
+    "confidence": 32.1,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 9.899999999999999,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771879871481
+  },
+  {
+    "confidence": 33.9,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 8.100000000000001,
+    "direction": null,
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771879961493
+  },
+  {
+    "confidence": 32.9,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 9.100000000000001,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771879981487
+  },
+  {
+    "confidence": 36.1,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.899999999999999,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771879991520
+  },
+  {
+    "confidence": 36.1,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.899999999999999,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771880001498
+  },
+  {
+    "confidence": 36.9,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.100000000000001,
+    "direction": null,
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771880031511
+  },
+  {
+    "confidence": 32.9,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 9.100000000000001,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771880041511
+  },
+  {
+    "confidence": 32.9,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 9.100000000000001,
+    "direction": null,
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771880051515
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881152421
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881152423
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881152423
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881152424
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881550498
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881550499
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881550499
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881550499
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881935929
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881935931
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881935931
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771881935932
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771882048520
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771882048521
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771882048521
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771882048522
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771893252583
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771893252585
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771893252585
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771893252585
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771893663683
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771893663684
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771893663684
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771893663685
+  },
+  {
+    "confidence": 36.3,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 8.700000000000003,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771943865238
+  },
+  {
+    "confidence": 34.1,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 7.899999999999999,
+    "direction": null,
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771943875820
+  },
+  {
+    "confidence": 44.5,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 0.5,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771943965191
+  },
+  {
+    "confidence": 43.7,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 1.2999999999999972,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771943985756
+  },
+  {
+    "confidence": 36.9,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 8.100000000000001,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771943995736
+  },
+  {
+    "confidence": 34,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 8,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944015118
+  },
+  {
+    "confidence": 32.8,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 9.200000000000003,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944036167
+  },
+  {
+    "confidence": 32.8,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 9.200000000000003,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944045042
+  },
+  {
+    "confidence": 32.8,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 9.200000000000003,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944055020
+  },
+  {
+    "confidence": 41.8,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 0.20000000000000284,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944155285
+  },
+  {
+    "confidence": 41.8,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 0.20000000000000284,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944165128
+  },
+  {
+    "confidence": 40,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 2,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944185225
+  },
+  {
+    "confidence": 38.8,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 3.200000000000003,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944205032
+  },
+  {
+    "confidence": 36.8,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 5.200000000000003,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944215073
+  },
+  {
+    "confidence": 38.8,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 3.200000000000003,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944225115
+  },
+  {
+    "confidence": 38.8,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 3.200000000000003,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944235040
+  },
+  {
+    "confidence": 34.8,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 7.200000000000003,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944245078
+  },
+  {
+    "confidence": 40.6,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 1.3999999999999986,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771944265035
+  },
+  {
+    "confidence": 41.4,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 0.6000000000000014,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771945205412
+  },
+  {
+    "confidence": 33.6,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 8.399999999999999,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771945485284
+  },
+  {
+    "confidence": 41.6,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 0.3999999999999986,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771945495330
+  },
+  {
+    "confidence": 38.9,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 3.1000000000000014,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771946555422
+  },
+  {
+    "confidence": 39.9,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 2.1000000000000014,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771946565435
+  },
+  {
+    "confidence": 38.4,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 3.6000000000000014,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771946575455
+  },
+  {
+    "confidence": 35.9,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 6.100000000000001,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771946585606
+  },
+  {
+    "confidence": 39.9,
+    "thresholdA": 68,
+    "thresholdB": 42,
+    "gap": 2.1000000000000014,
+    "direction": "LONG",
+    "session": "OPEN_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771946595465
+  },
+  {
+    "confidence": 40.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.7999999999999972,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950321859
+  },
+  {
+    "confidence": 40.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.7999999999999972,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950331903
+  },
+  {
+    "confidence": 40.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.7999999999999972,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950341861
+  },
+  {
+    "confidence": 40.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.7999999999999972,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950371889
+  },
+  {
+    "confidence": 40.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.7999999999999972,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950381879
+  },
+  {
+    "confidence": 36.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.799999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950391957
+  },
+  {
+    "confidence": 40.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.7999999999999972,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950561910
+  },
+  {
+    "confidence": 36.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.799999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950591911
+  },
+  {
+    "confidence": 42.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 2.799999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950615605
+  },
+  {
+    "confidence": 39.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.799999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950701874
+  },
+  {
+    "confidence": 37.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 7.799999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950711894
+  },
+  {
+    "confidence": 37.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 7.799999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950721896
+  },
+  {
+    "confidence": 39.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.799999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950761915
+  },
+  {
+    "confidence": 41.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.799999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950792008
+  },
+  {
+    "confidence": 41.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.799999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950801891
+  },
+  {
+    "confidence": 35.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 9.799999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950831914
+  },
+  {
+    "confidence": 42.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 2.799999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950871947
+  },
+  {
+    "confidence": 33.7,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 8.299999999999997,
+    "direction": null,
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771950962952
+  },
+  {
+    "confidence": 40.9,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 4.100000000000001,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951051978
+  },
+  {
+    "confidence": 39.9,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.100000000000001,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951061979
+  },
+  {
+    "confidence": 39.9,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.100000000000001,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951071995
+  },
+  {
+    "confidence": 34.7,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 7.299999999999997,
+    "direction": null,
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951172039
+  },
+  {
+    "confidence": 36.9,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.100000000000001,
+    "direction": null,
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951182135
+  },
+  {
+    "confidence": 40.6,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 4.399999999999999,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951252019
+  },
+  {
+    "confidence": 38.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.200000000000003,
+    "direction": null,
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951272077
+  },
+  {
+    "confidence": 38.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.200000000000003,
+    "direction": null,
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951292013
+  },
+  {
+    "confidence": 36.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 8.200000000000003,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951301992
+  },
+  {
+    "confidence": 41.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.200000000000003,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951312029
+  },
+  {
+    "confidence": 39.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.200000000000003,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951322023
+  },
+  {
+    "confidence": 37.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 4.200000000000003,
+    "direction": null,
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951332093
+  },
+  {
+    "confidence": 38.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.200000000000003,
+    "direction": null,
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951412012
+  },
+  {
+    "confidence": 35,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 10,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951482263
+  },
+  {
+    "confidence": 44.4,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 0.6000000000000014,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951522031
+  },
+  {
+    "confidence": 43.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.2000000000000028,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951532033
+  },
+  {
+    "confidence": 39.4,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.600000000000001,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951572097
+  },
+  {
+    "confidence": 35.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 6.200000000000003,
+    "direction": null,
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951603628
+  },
+  {
+    "confidence": 39.6,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.399999999999999,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951622227
+  },
+  {
+    "confidence": 43.6,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.3999999999999986,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951632223
+  },
+  {
+    "confidence": 41.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.200000000000003,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951652037
+  },
+  {
+    "confidence": 42.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 2.200000000000003,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951712119
+  },
+  {
+    "confidence": 43.6,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.3999999999999986,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951732106
+  },
+  {
+    "confidence": 35.8,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 9.200000000000003,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951772130
+  },
+  {
+    "confidence": 42.7,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 2.299999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951802148
+  },
+  {
+    "confidence": 42.7,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 2.299999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951812114
+  },
+  {
+    "confidence": 40.7,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 4.299999999999997,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951862157
+  },
+  {
+    "confidence": 44.7,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 0.29999999999999716,
+    "direction": "LONG",
+    "session": "MIDMORNING",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771951883225
+  },
+  {
+    "confidence": 41.9,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 0.10000000000000142,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771956702897
+  },
+  {
+    "confidence": 41.9,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 0.10000000000000142,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771956752880
+  },
+  {
+    "confidence": 41.9,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 0.10000000000000142,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771956792901
+  },
+  {
+    "confidence": 36.9,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 5.100000000000001,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771956842878
+  },
+  {
+    "confidence": 39.9,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 2.1000000000000014,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771956852919
+  },
+  {
+    "confidence": 41.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 0.6000000000000014,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771957672985
+  },
+  {
+    "confidence": 38.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 3.3999999999999986,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771957682986
+  },
+  {
+    "confidence": 34.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 7.399999999999999,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771957692983
+  },
+  {
+    "confidence": 37.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 4.600000000000001,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771957912993
+  },
+  {
+    "confidence": 32.2,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 9.799999999999997,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771957922998
+  },
+  {
+    "confidence": 39.2,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 2.799999999999997,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771957933711
+  },
+  {
+    "confidence": 39.2,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 2.799999999999997,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771957942957
+  },
+  {
+    "confidence": 39.2,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 2.799999999999997,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771957952989
+  },
+  {
+    "confidence": 34.8,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 7.200000000000003,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771957983000
+  },
+  {
+    "confidence": 35.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 6.399999999999999,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771958022985
+  },
+  {
+    "confidence": 41.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 0.6000000000000014,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771958032999
+  },
+  {
+    "confidence": 32.6,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 9.399999999999999,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771958042981
+  },
+  {
+    "confidence": 36.2,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 5.799999999999997,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771958063008
+  },
+  {
+    "confidence": 36.2,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 5.799999999999997,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771958072981
+  },
+  {
+    "confidence": 41.4,
+    "thresholdA": 73,
+    "thresholdB": 42,
+    "gap": 0.6000000000000014,
+    "direction": "LONG",
+    "session": "MIDDAY_CHOP",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771958082969
+  },
+  {
+    "confidence": 37.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 4.799999999999997,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771959613102
+  },
+  {
+    "confidence": 40.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.7999999999999972,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771959633245
+  },
+  {
+    "confidence": 38.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.799999999999997,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771959743138
+  },
+  {
+    "confidence": 38.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.799999999999997,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771959763128
+  },
+  {
+    "confidence": 38.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.799999999999997,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771959773136
+  },
+  {
+    "confidence": 36.4,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 5.600000000000001,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771959793823
+  },
+  {
+    "confidence": 40.4,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.6000000000000014,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771959803135
+  },
+  {
+    "confidence": 41.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 0.7999999999999972,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771959833118
+  },
+  {
+    "confidence": 40.9,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.1000000000000014,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771960681671
+  },
+  {
+    "confidence": 37.4,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 4.600000000000001,
+    "direction": "SHORT",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771962498150
+  },
+  {
+    "confidence": 34.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 7.799999999999997,
+    "direction": null,
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771962506965
+  },
+  {
+    "confidence": 38.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.799999999999997,
+    "direction": null,
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771962547275
+  },
+  {
+    "confidence": 38.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 3.799999999999997,
+    "direction": null,
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771962557053
+  },
+  {
+    "confidence": 43.4,
+    "thresholdA": 55,
+    "thresholdB": 45,
+    "gap": 1.6000000000000014,
+    "direction": null,
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "NEUTRAL",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771962833252
+  },
+  {
+    "confidence": 40.4,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.6000000000000014,
+    "direction": "SHORT",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771962850919
+  },
+  {
+    "confidence": 40.4,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.6000000000000014,
+    "direction": "SHORT",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771962860733
+  },
+  {
+    "confidence": 40.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 1.7999999999999972,
+    "direction": null,
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771962890734
+  },
+  {
+    "confidence": 33.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 8.799999999999997,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771965361177
+  },
+  {
+    "confidence": 32.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 9.799999999999997,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771965371185
+  },
+  {
+    "confidence": 35.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 6.799999999999997,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771965381209
+  },
+  {
+    "confidence": 37.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 4.799999999999997,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771965391278
+  },
+  {
+    "confidence": 33.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 8.799999999999997,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771965401207
+  },
+  {
+    "confidence": 33.2,
+    "thresholdA": 58,
+    "thresholdB": 42,
+    "gap": 8.799999999999997,
+    "direction": "LONG",
+    "session": "CLOSE_RUSH",
+    "rvivRegime": "RANGING",
+    "catalystPenalty": null,
+    "catalystBias": null,
+    "timestamp": 1771965411212
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771968849138
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771968849141
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771968849141
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771968849142
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771970017649
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771970017652
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771970017652
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771970017653
+  },
+  {
+    "confidence": 52,
+    "gap": 3,
+    "session": "MIDMORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771970199276
+  },
+  {
+    "confidence": 50,
+    "gap": 3,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771970199279
+  },
+  {
+    "confidence": 51,
+    "gap": 4,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771970199279
+  },
+  {
+    "confidence": 52,
+    "gap": 8,
+    "session": "MORNING",
+    "rvivRegime": "NEUTRAL",
+    "timestamp": 1771970199280
+  }
+]

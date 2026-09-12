@@ -1,0 +1,721 @@
+{
+  "generated_at": "2026-02-24T21:54:03.048Z",
+  "overall": {
+    "date": "2026-02-24",
+    "totalTrades": 94,
+    "wins": 49,
+    "losses": 45,
+    "winRate": "52.1%",
+    "netPnL": 242.03661030714557,
+    "avgPnL": 2.5748575564589955,
+    "avgConfidence": 69.25212765957446,
+    "avgHoldTime": 66.82659574468084
+  },
+  "matrix": {
+    "session_x_regime": {
+      "MIDMORNING×NEUTRAL": {
+        "trades": 22,
+        "wins": 13,
+        "pnl": 161.25,
+        "winRate": "59.1%",
+        "avgPnL": 7.33
+      },
+      "OPEN_RUSH×NEUTRAL": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 37.5,
+        "winRate": "100.0%",
+        "avgPnL": 18.75
+      },
+      "OPEN_RUSH×RANGING": {
+        "trades": 15,
+        "wins": 8,
+        "pnl": 41.88,
+        "winRate": "53.3%",
+        "avgPnL": 2.79
+      },
+      "MIDMORNING×RANGING": {
+        "trades": 10,
+        "wins": 4,
+        "pnl": -2.5,
+        "winRate": "40.0%",
+        "avgPnL": -0.25
+      },
+      "MIDDAY_CHOP×RANGING": {
+        "trades": 20,
+        "wins": 13,
+        "pnl": 33.53,
+        "winRate": "65.0%",
+        "avgPnL": 1.68
+      },
+      "MIDDAY_CHOP×NEUTRAL": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 10,
+        "winRate": "100.0%",
+        "avgPnL": 10
+      },
+      "CLOSE_RUSH×RANGING": {
+        "trades": 23,
+        "wins": 8,
+        "pnl": -34.62,
+        "winRate": "34.8%",
+        "avgPnL": -1.51
+      },
+      "CLOSE_RUSH×NEUTRAL": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -5,
+        "winRate": "0.0%",
+        "avgPnL": -5
+      }
+    },
+    "session": {
+      "MIDMORNING": {
+        "trades": 32,
+        "wins": 17,
+        "pnl": 158.75,
+        "winRate": "53.1%",
+        "avgPnL": 4.96
+      },
+      "OPEN_RUSH": {
+        "trades": 17,
+        "wins": 10,
+        "pnl": 79.38,
+        "winRate": "58.8%",
+        "avgPnL": 4.67
+      },
+      "MIDDAY_CHOP": {
+        "trades": 21,
+        "wins": 14,
+        "pnl": 43.53,
+        "winRate": "66.7%",
+        "avgPnL": 2.07
+      },
+      "CLOSE_RUSH": {
+        "trades": 24,
+        "wins": 8,
+        "pnl": -39.62,
+        "winRate": "33.3%",
+        "avgPnL": -1.65
+      }
+    },
+    "regime": {
+      "NEUTRAL": {
+        "trades": 26,
+        "wins": 16,
+        "pnl": 203.75,
+        "winRate": "61.5%",
+        "avgPnL": 7.84
+      },
+      "RANGING": {
+        "trades": 68,
+        "wins": 33,
+        "pnl": 38.29,
+        "winRate": "48.5%",
+        "avgPnL": 0.56
+      }
+    },
+    "path_x_confidence": {
+      "A×60-65": {
+        "trades": 19,
+        "wins": 8,
+        "pnl": 130.63,
+        "winRate": "42.1%",
+        "avgPnL": 6.88
+      },
+      "A×65-70": {
+        "trades": 12,
+        "wins": 7,
+        "pnl": 66.25,
+        "winRate": "58.3%",
+        "avgPnL": 5.52
+      },
+      "A×70-75": {
+        "trades": 28,
+        "wins": 14,
+        "pnl": -21.72,
+        "winRate": "50.0%",
+        "avgPnL": -0.78
+      },
+      "A×75-80": {
+        "trades": 12,
+        "wins": 9,
+        "pnl": 44.38,
+        "winRate": "75.0%",
+        "avgPnL": 3.7
+      },
+      "B×55-60": {
+        "trades": 5,
+        "wins": 5,
+        "pnl": 38.75,
+        "winRate": "100.0%",
+        "avgPnL": 7.75
+      },
+      "B×45-55": {
+        "trades": 4,
+        "wins": 1,
+        "pnl": -7.5,
+        "winRate": "25.0%",
+        "avgPnL": -1.88
+      },
+      "A×80+": {
+        "trades": 10,
+        "wins": 4,
+        "pnl": 1.88,
+        "winRate": "40.0%",
+        "avgPnL": 0.19
+      },
+      "A×55-60": {
+        "trades": 4,
+        "wins": 1,
+        "pnl": -10.63,
+        "winRate": "25.0%",
+        "avgPnL": -2.66
+      }
+    },
+    "confidence_band": {
+      "60-65": {
+        "trades": 19,
+        "wins": 8,
+        "pnl": 130.63,
+        "winRate": "42.1%",
+        "avgPnL": 6.88
+      },
+      "65-70": {
+        "trades": 12,
+        "wins": 7,
+        "pnl": 66.25,
+        "winRate": "58.3%",
+        "avgPnL": 5.52
+      },
+      "70-75": {
+        "trades": 28,
+        "wins": 14,
+        "pnl": -21.72,
+        "winRate": "50.0%",
+        "avgPnL": -0.78
+      },
+      "75-80": {
+        "trades": 12,
+        "wins": 9,
+        "pnl": 44.38,
+        "winRate": "75.0%",
+        "avgPnL": 3.7
+      },
+      "55-60": {
+        "trades": 9,
+        "wins": 6,
+        "pnl": 28.13,
+        "winRate": "66.7%",
+        "avgPnL": 3.13
+      },
+      "45-55": {
+        "trades": 4,
+        "wins": 1,
+        "pnl": -7.5,
+        "winRate": "25.0%",
+        "avgPnL": -1.88
+      },
+      "80+": {
+        "trades": 10,
+        "wins": 4,
+        "pnl": 1.88,
+        "winRate": "40.0%",
+        "avgPnL": 0.19
+      }
+    },
+    "direction_x_session": {
+      "long×MIDMORNING": {
+        "trades": 30,
+        "wins": 16,
+        "pnl": 162.5,
+        "winRate": "53.3%",
+        "avgPnL": 5.42
+      },
+      "short×OPEN_RUSH": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 28.13,
+        "winRate": "100.0%",
+        "avgPnL": 14.06
+      },
+      "long×OPEN_RUSH": {
+        "trades": 15,
+        "wins": 8,
+        "pnl": 51.25,
+        "winRate": "53.3%",
+        "avgPnL": 3.42
+      },
+      "short×MIDMORNING": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": -3.75,
+        "winRate": "50.0%",
+        "avgPnL": -1.88
+      },
+      "long×MIDDAY_CHOP": {
+        "trades": 19,
+        "wins": 12,
+        "pnl": 30.4,
+        "winRate": "63.2%",
+        "avgPnL": 1.6
+      },
+      "short×MIDDAY_CHOP": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 13.13,
+        "winRate": "100.0%",
+        "avgPnL": 6.56
+      },
+      "long×CLOSE_RUSH": {
+        "trades": 20,
+        "wins": 7,
+        "pnl": -22.74,
+        "winRate": "35.0%",
+        "avgPnL": -1.14
+      },
+      "short×CLOSE_RUSH": {
+        "trades": 4,
+        "wins": 1,
+        "pnl": -16.88,
+        "winRate": "25.0%",
+        "avgPnL": -4.22
+      }
+    },
+    "direction": {
+      "long": {
+        "trades": 84,
+        "wins": 43,
+        "pnl": 221.41,
+        "winRate": "51.2%",
+        "avgPnL": 2.64
+      },
+      "short": {
+        "trades": 10,
+        "wins": 6,
+        "pnl": 20.63,
+        "winRate": "60.0%",
+        "avgPnL": 2.06
+      }
+    },
+    "entry_type": {
+      "UNKNOWN": {
+        "trades": 4,
+        "wins": 4,
+        "pnl": 150,
+        "winRate": "100.0%",
+        "avgPnL": 37.5
+      },
+      "TICK_PERFECT": {
+        "trades": 65,
+        "wins": 37,
+        "pnl": 108.29,
+        "winRate": "56.9%",
+        "avgPnL": 1.67
+      },
+      "APPROXIMATE": {
+        "trades": 25,
+        "wins": 8,
+        "pnl": -16.25,
+        "winRate": "32.0%",
+        "avgPnL": -0.65
+      }
+    },
+    "exit_reason": {
+      "TP": {
+        "trades": 18,
+        "wins": 18,
+        "pnl": 301.25,
+        "winRate": "100.0%",
+        "avgPnL": 16.74
+      },
+      "TIME": {
+        "trades": 24,
+        "wins": 16,
+        "pnl": 134.38,
+        "winRate": "66.7%",
+        "avgPnL": 5.6
+      },
+      "TRAIL": {
+        "trades": 7,
+        "wins": 7,
+        "pnl": 15.16,
+        "winRate": "100.0%",
+        "avgPnL": 2.17
+      },
+      "SL": {
+        "trades": 37,
+        "wins": 0,
+        "pnl": -218.75,
+        "winRate": "0.0%",
+        "avgPnL": -5.91
+      },
+      "BREAKEVEN_STOP": {
+        "trades": 8,
+        "wins": 8,
+        "pnl": 10,
+        "winRate": "100.0%",
+        "avgPnL": 1.25
+      }
+    },
+    "path": {
+      "A": {
+        "trades": 85,
+        "wins": 43,
+        "pnl": 210.79,
+        "winRate": "50.6%",
+        "avgPnL": 2.48
+      },
+      "B": {
+        "trades": 9,
+        "wins": 6,
+        "pnl": 31.25,
+        "winRate": "66.7%",
+        "avgPnL": 3.47
+      }
+    },
+    "stop_bucket": {
+      "11-15": {
+        "trades": 5,
+        "wins": 5,
+        "pnl": 153.13,
+        "winRate": "100.0%",
+        "avgPnL": 30.63
+      },
+      "16+": {
+        "trades": 7,
+        "wins": 4,
+        "pnl": 45,
+        "winRate": "57.1%",
+        "avgPnL": 6.43
+      },
+      "1-3": {
+        "trades": 37,
+        "wins": 32,
+        "pnl": 186.03,
+        "winRate": "86.5%",
+        "avgPnL": 5.03
+      },
+      "4-6": {
+        "trades": 42,
+        "wins": 7,
+        "pnl": -132.12,
+        "winRate": "16.7%",
+        "avgPnL": -3.15
+      },
+      "7-10": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": -10,
+        "winRate": "33.3%",
+        "avgPnL": -3.33
+      }
+    },
+    "stop_bucket_x_entry_type": {
+      "11-15×UNKNOWN": {
+        "trades": 4,
+        "wins": 4,
+        "pnl": 150,
+        "winRate": "100.0%",
+        "avgPnL": 37.5
+      },
+      "16+×TICK_PERFECT": {
+        "trades": 7,
+        "wins": 4,
+        "pnl": 45,
+        "winRate": "57.1%",
+        "avgPnL": 6.43
+      },
+      "1-3×TICK_PERFECT": {
+        "trades": 27,
+        "wins": 25,
+        "pnl": 152.9,
+        "winRate": "92.6%",
+        "avgPnL": 5.66
+      },
+      "4-6×APPROXIMATE": {
+        "trades": 15,
+        "wins": 1,
+        "pnl": -49.38,
+        "winRate": "6.7%",
+        "avgPnL": -3.29
+      },
+      "1-3×APPROXIMATE": {
+        "trades": 10,
+        "wins": 7,
+        "pnl": 33.13,
+        "winRate": "70.0%",
+        "avgPnL": 3.31
+      },
+      "7-10×TICK_PERFECT": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": -10,
+        "winRate": "33.3%",
+        "avgPnL": -3.33
+      },
+      "4-6×TICK_PERFECT": {
+        "trades": 27,
+        "wins": 6,
+        "pnl": -82.74,
+        "winRate": "22.2%",
+        "avgPnL": -3.06
+      },
+      "11-15×TICK_PERFECT": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 3.13,
+        "winRate": "100.0%",
+        "avgPnL": 3.13
+      }
+    }
+  },
+  "signalAccuracy": {
+    "5m_trend": {
+      "total": 65,
+      "correct": 30,
+      "wins": 37,
+      "losses": 28,
+      "votedWithDir": 52,
+      "accuracy": "57.7%",
+      "winRateWhenVotedWith": "57.7%",
+      "prevalence": "80.0%"
+    },
+    "delta": {
+      "total": 94,
+      "correct": 37,
+      "wins": 49,
+      "losses": 45,
+      "votedWithDir": 72,
+      "accuracy": "51.4%",
+      "winRateWhenVotedWith": "51.4%",
+      "prevalence": "76.6%"
+    },
+    "tick_flow": {
+      "total": 68,
+      "correct": 22,
+      "wins": 36,
+      "losses": 32,
+      "votedWithDir": 40,
+      "accuracy": "55.0%",
+      "winRateWhenVotedWith": "55.0%",
+      "prevalence": "58.8%"
+    },
+    "tick_mom": {
+      "total": 59,
+      "correct": 19,
+      "wins": 27,
+      "losses": 32,
+      "votedWithDir": 41,
+      "accuracy": "46.3%",
+      "winRateWhenVotedWith": "46.3%",
+      "prevalence": "69.5%"
+    },
+    "vix_struct": {
+      "total": 90,
+      "correct": 39,
+      "wins": 45,
+      "losses": 45,
+      "votedWithDir": 80,
+      "accuracy": "48.8%",
+      "winRateWhenVotedWith": "48.8%",
+      "prevalence": "88.9%"
+    },
+    "15m_trend": {
+      "total": 63,
+      "correct": 29,
+      "wins": 34,
+      "losses": 29,
+      "votedWithDir": 57,
+      "accuracy": "50.9%",
+      "winRateWhenVotedWith": "50.9%",
+      "prevalence": "90.5%"
+    },
+    "risk_sent": {
+      "total": 10,
+      "correct": 3,
+      "wins": 5,
+      "losses": 5,
+      "votedWithDir": 8,
+      "accuracy": "37.5%",
+      "winRateWhenVotedWith": "37.5%",
+      "prevalence": "80.0%"
+    },
+    "cum_delta": {
+      "total": 79,
+      "correct": 18,
+      "wins": 39,
+      "losses": 40,
+      "votedWithDir": 31,
+      "accuracy": "58.1%",
+      "winRateWhenVotedWith": "58.1%",
+      "prevalence": "39.2%"
+    },
+    "nq_div": {
+      "total": 69,
+      "correct": 31,
+      "wins": 34,
+      "losses": 35,
+      "votedWithDir": 64,
+      "accuracy": "48.4%",
+      "winRateWhenVotedWith": "48.4%",
+      "prevalence": "92.8%"
+    },
+    "vix_trend": {
+      "total": 60,
+      "correct": 24,
+      "wins": 27,
+      "losses": 33,
+      "votedWithDir": 53,
+      "accuracy": "45.3%",
+      "winRateWhenVotedWith": "45.3%",
+      "prevalence": "88.3%"
+    }
+  },
+  "layerContribution": {
+    "macro": {
+      "avgOnWins": -0.16,
+      "avgOnLosses": -1.22,
+      "delta": 1.06,
+      "maxOnWins": 12,
+      "maxOnLosses": 2
+    },
+    "futures": {
+      "avgOnWins": 15.35,
+      "avgOnLosses": 14.67,
+      "delta": 0.68,
+      "maxOnWins": 25,
+      "maxOnLosses": 25
+    },
+    "micro": {
+      "avgOnWins": 11.04,
+      "avgOnLosses": 10.07,
+      "delta": 0.97,
+      "maxOnWins": 18,
+      "maxOnLosses": 18
+    },
+    "tick": {
+      "avgOnWins": 17.03,
+      "avgOnLosses": 18.76,
+      "delta": -1.73,
+      "maxOnWins": 33.1,
+      "maxOnLosses": 33.9
+    },
+    "execution": {
+      "avgOnWins": 11.2,
+      "avgOnLosses": 12.07,
+      "delta": -0.86,
+      "maxOnWins": 16,
+      "maxOnLosses": 16
+    },
+    "cross_asset": {
+      "avgOnWins": 5.9,
+      "avgOnLosses": 7.13,
+      "delta": -1.24,
+      "maxOnWins": 11,
+      "maxOnLosses": 11
+    }
+  },
+  "mfeMaeSummary": {
+    "losersWithPositiveMFE": 19,
+    "losersWithPositiveMFEPct": "42.2%",
+    "avgLoserMFE": 0.612,
+    "avgLoserMAE": 1.639,
+    "avgWinnerMAE": 0.482
+  },
+  "bestSegments": [
+    {
+      "dimension": "exit_reason",
+      "key": "TP",
+      "trades": 18,
+      "wins": 18,
+      "pnl": 301.25,
+      "winRate": "100.0%",
+      "avgPnL": 16.74
+    },
+    {
+      "dimension": "direction",
+      "key": "long",
+      "trades": 84,
+      "wins": 43,
+      "pnl": 221.41,
+      "winRate": "51.2%",
+      "avgPnL": 2.64
+    },
+    {
+      "dimension": "path",
+      "key": "A",
+      "trades": 85,
+      "wins": 43,
+      "pnl": 210.79,
+      "winRate": "50.6%",
+      "avgPnL": 2.48
+    },
+    {
+      "dimension": "regime",
+      "key": "NEUTRAL",
+      "trades": 26,
+      "wins": 16,
+      "pnl": 203.75,
+      "winRate": "61.5%",
+      "avgPnL": 7.84
+    },
+    {
+      "dimension": "stop_bucket",
+      "key": "1-3",
+      "trades": 37,
+      "wins": 32,
+      "pnl": 186.03,
+      "winRate": "86.5%",
+      "avgPnL": 5.03
+    }
+  ],
+  "worstSegments": [
+    {
+      "dimension": "exit_reason",
+      "key": "SL",
+      "trades": 37,
+      "wins": 0,
+      "pnl": -218.75,
+      "winRate": "0.0%",
+      "avgPnL": -5.91
+    },
+    {
+      "dimension": "stop_bucket",
+      "key": "4-6",
+      "trades": 42,
+      "wins": 7,
+      "pnl": -132.12,
+      "winRate": "16.7%",
+      "avgPnL": -3.15
+    },
+    {
+      "dimension": "stop_bucket_x_entry_type",
+      "key": "4-6×TICK_PERFECT",
+      "trades": 27,
+      "wins": 6,
+      "pnl": -82.74,
+      "winRate": "22.2%",
+      "avgPnL": -3.06
+    },
+    {
+      "dimension": "stop_bucket_x_entry_type",
+      "key": "4-6×APPROXIMATE",
+      "trades": 15,
+      "wins": 1,
+      "pnl": -49.38,
+      "winRate": "6.7%",
+      "avgPnL": -3.29
+    },
+    {
+      "dimension": "session",
+      "key": "CLOSE_RUSH",
+      "trades": 24,
+      "wins": 8,
+      "pnl": -39.62,
+      "winRate": "33.3%",
+      "avgPnL": -1.65
+    }
+  ]
+}

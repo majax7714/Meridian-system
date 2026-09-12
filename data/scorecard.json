@@ -1,0 +1,1152 @@
+{
+  "updated_at": "2026-02-24T21:54:42.628Z",
+  "totalTrades": 153,
+  "windows": {
+    "short": {
+      "trades": 50,
+      "signalAccuracy": {
+        "15m_trend": {
+          "total": 26,
+          "votedWithDir": 23,
+          "correct": 14,
+          "accuracy": 0.6086956521739131
+        },
+        "delta": {
+          "total": 50,
+          "votedWithDir": 32,
+          "correct": 17,
+          "accuracy": 0.53125
+        },
+        "tick_flow": {
+          "total": 34,
+          "votedWithDir": 23,
+          "correct": 12,
+          "accuracy": 0.5217391304347826
+        },
+        "vix_trend": {
+          "total": 48,
+          "votedWithDir": 42,
+          "correct": 21,
+          "accuracy": 0.5
+        },
+        "nq_div": {
+          "total": 46,
+          "votedWithDir": 41,
+          "correct": 20,
+          "accuracy": 0.4878048780487805
+        },
+        "vix_struct": {
+          "total": 48,
+          "votedWithDir": 42,
+          "correct": 21,
+          "accuracy": 0.5
+        },
+        "cum_delta": {
+          "total": 41,
+          "votedWithDir": 6,
+          "correct": 3,
+          "accuracy": 0.5
+        },
+        "5m_trend": {
+          "total": 27,
+          "votedWithDir": 18,
+          "correct": 12,
+          "accuracy": 0.6666666666666666
+        },
+        "tick_mom": {
+          "total": 27,
+          "votedWithDir": 20,
+          "correct": 9,
+          "accuracy": 0.45
+        },
+        "risk_sent": {
+          "total": 2,
+          "votedWithDir": 2,
+          "correct": 0,
+          "accuracy": 0
+        }
+      },
+      "layerCorrelation": {
+        "macro": {
+          "avgWin": 1.4,
+          "avgLoss": 0.57,
+          "delta": 0.83,
+          "correlation": 0.069,
+          "n": 46
+        },
+        "futures": {
+          "avgWin": 16.08,
+          "avgLoss": 14.08,
+          "delta": 1.99,
+          "correlation": 0.08,
+          "n": 50
+        },
+        "micro": {
+          "avgWin": 9.79,
+          "avgLoss": 9.05,
+          "delta": 0.74,
+          "correlation": 0.048,
+          "n": 50
+        },
+        "tick": {
+          "avgWin": 15.38,
+          "avgLoss": 18.1,
+          "delta": -2.72,
+          "correlation": -0.084,
+          "n": 50
+        },
+        "execution": {
+          "avgWin": 11.71,
+          "avgLoss": 11.88,
+          "delta": -0.17,
+          "correlation": -0.01,
+          "n": 48
+        },
+        "cross_asset": {
+          "avgWin": 8.39,
+          "avgLoss": 7.61,
+          "delta": 0.78,
+          "correlation": 0.071,
+          "n": 46
+        }
+      },
+      "conditionalPerformance": {
+        "15m_trend×RANGING": {
+          "correct": 13,
+          "total": 22,
+          "accuracy": 0.591
+        },
+        "15m_trend×MIDMORNING": {
+          "correct": 2,
+          "total": 3,
+          "accuracy": 0.667
+        },
+        "vix_trend×RANGING": {
+          "correct": 20,
+          "total": 40,
+          "accuracy": 0.5
+        },
+        "vix_trend×MIDMORNING": {
+          "correct": 2,
+          "total": 3,
+          "accuracy": 0.667
+        },
+        "nq_div×RANGING": {
+          "correct": 19,
+          "total": 39,
+          "accuracy": 0.487
+        },
+        "nq_div×MIDMORNING": {
+          "correct": 2,
+          "total": 3,
+          "accuracy": 0.667
+        },
+        "vix_struct×RANGING": {
+          "correct": 20,
+          "total": 40,
+          "accuracy": 0.5
+        },
+        "vix_struct×MIDMORNING": {
+          "correct": 2,
+          "total": 3,
+          "accuracy": 0.667
+        },
+        "5m_trend×RANGING": {
+          "correct": 9,
+          "total": 15,
+          "accuracy": 0.6
+        },
+        "5m_trend×MIDMORNING": {
+          "correct": 3,
+          "total": 4,
+          "accuracy": 0.75
+        },
+        "delta×RANGING": {
+          "correct": 14,
+          "total": 29,
+          "accuracy": 0.483
+        },
+        "delta×MIDMORNING": {
+          "correct": 3,
+          "total": 4,
+          "accuracy": 0.75
+        },
+        "tick_flow×RANGING": {
+          "correct": 11,
+          "total": 22,
+          "accuracy": 0.5
+        },
+        "tick_flow×MIDMORNING": {
+          "correct": 1,
+          "total": 2,
+          "accuracy": 0.5
+        },
+        "tick_mom×RANGING": {
+          "correct": 8,
+          "total": 18,
+          "accuracy": 0.444
+        },
+        "tick_mom×MIDMORNING": {
+          "correct": 0,
+          "total": 1,
+          "accuracy": 0
+        },
+        "5m_trend×MIDDAY_CHOP": {
+          "correct": 9,
+          "total": 14,
+          "accuracy": 0.643
+        },
+        "15m_trend×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 19,
+          "accuracy": 0.632
+        },
+        "delta×MIDDAY_CHOP": {
+          "correct": 11,
+          "total": 18,
+          "accuracy": 0.611
+        },
+        "tick_flow×MIDDAY_CHOP": {
+          "correct": 6,
+          "total": 9,
+          "accuracy": 0.667
+        },
+        "tick_mom×MIDDAY_CHOP": {
+          "correct": 6,
+          "total": 10,
+          "accuracy": 0.6
+        },
+        "vix_trend×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 19,
+          "accuracy": 0.632
+        },
+        "nq_div×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 19,
+          "accuracy": 0.632
+        },
+        "risk_sent×RANGING": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0
+        },
+        "risk_sent×MIDDAY_CHOP": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0
+        },
+        "vix_struct×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 19,
+          "accuracy": 0.632
+        },
+        "5m_trend×NEUTRAL": {
+          "correct": 3,
+          "total": 3,
+          "accuracy": 1
+        },
+        "15m_trend×NEUTRAL": {
+          "correct": 1,
+          "total": 1,
+          "accuracy": 1
+        },
+        "delta×NEUTRAL": {
+          "correct": 3,
+          "total": 3,
+          "accuracy": 1
+        },
+        "tick_flow×NEUTRAL": {
+          "correct": 1,
+          "total": 1,
+          "accuracy": 1
+        },
+        "tick_mom×NEUTRAL": {
+          "correct": 1,
+          "total": 2,
+          "accuracy": 0.5
+        },
+        "vix_trend×NEUTRAL": {
+          "correct": 1,
+          "total": 2,
+          "accuracy": 0.5
+        },
+        "nq_div×NEUTRAL": {
+          "correct": 1,
+          "total": 2,
+          "accuracy": 0.5
+        },
+        "vix_struct×NEUTRAL": {
+          "correct": 1,
+          "total": 2,
+          "accuracy": 0.5
+        },
+        "cum_delta×RANGING": {
+          "correct": 3,
+          "total": 6,
+          "accuracy": 0.5
+        },
+        "cum_delta×MIDDAY_CHOP": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1
+        },
+        "delta×CLOSE_RUSH": {
+          "correct": 3,
+          "total": 10,
+          "accuracy": 0.3
+        },
+        "tick_flow×CLOSE_RUSH": {
+          "correct": 5,
+          "total": 12,
+          "accuracy": 0.417
+        },
+        "tick_mom×CLOSE_RUSH": {
+          "correct": 3,
+          "total": 9,
+          "accuracy": 0.333
+        },
+        "vix_trend×CLOSE_RUSH": {
+          "correct": 7,
+          "total": 20,
+          "accuracy": 0.35
+        },
+        "nq_div×CLOSE_RUSH": {
+          "correct": 6,
+          "total": 19,
+          "accuracy": 0.316
+        },
+        "vix_struct×CLOSE_RUSH": {
+          "correct": 7,
+          "total": 20,
+          "accuracy": 0.35
+        },
+        "cum_delta×CLOSE_RUSH": {
+          "correct": 1,
+          "total": 4,
+          "accuracy": 0.25
+        },
+        "15m_trend×CLOSE_RUSH": {
+          "correct": 0,
+          "total": 1,
+          "accuracy": 0
+        }
+      }
+    },
+    "medium": {
+      "trades": 153,
+      "signalAccuracy": {
+        "5m_trend": {
+          "total": 124,
+          "votedWithDir": 108,
+          "correct": 74,
+          "accuracy": 0.6851851851851852
+        },
+        "delta": {
+          "total": 153,
+          "votedWithDir": 128,
+          "correct": 81,
+          "accuracy": 0.6328125
+        },
+        "tick_flow": {
+          "total": 120,
+          "votedWithDir": 50,
+          "correct": 27,
+          "accuracy": 0.54
+        },
+        "15m_trend": {
+          "total": 79,
+          "votedWithDir": 71,
+          "correct": 34,
+          "accuracy": 0.4788732394366197
+        },
+        "vix_trend": {
+          "total": 70,
+          "votedWithDir": 63,
+          "correct": 26,
+          "accuracy": 0.4126984126984127
+        },
+        "nq_div": {
+          "total": 94,
+          "votedWithDir": 89,
+          "correct": 41,
+          "accuracy": 0.4606741573033708
+        },
+        "vix_struct": {
+          "total": 115,
+          "votedWithDir": 80,
+          "correct": 39,
+          "accuracy": 0.4875
+        },
+        "cum_delta": {
+          "total": 86,
+          "votedWithDir": 32,
+          "correct": 18,
+          "accuracy": 0.5625
+        },
+        "tick_mom": {
+          "total": 74,
+          "votedWithDir": 52,
+          "correct": 23,
+          "accuracy": 0.4423076923076923
+        },
+        "risk_sent": {
+          "total": 12,
+          "votedWithDir": 10,
+          "correct": 3,
+          "accuracy": 0.3
+        }
+      },
+      "layerCorrelation": {
+        "macro": {
+          "avgWin": 3.8,
+          "avgLoss": -2.21,
+          "delta": 6.01,
+          "correlation": 0.501,
+          "n": 149
+        },
+        "futures": {
+          "avgWin": 12.13,
+          "avgLoss": 13.85,
+          "delta": -1.72,
+          "correlation": -0.069,
+          "n": 153
+        },
+        "micro": {
+          "avgWin": 11.83,
+          "avgLoss": 9.96,
+          "delta": 1.87,
+          "correlation": 0.104,
+          "n": 153
+        },
+        "tick": {
+          "avgWin": 14.2,
+          "avgLoss": 18.51,
+          "delta": -4.31,
+          "correlation": -0.127,
+          "n": 153
+        },
+        "execution": {
+          "avgWin": 12.44,
+          "avgLoss": 12.27,
+          "delta": 0.17,
+          "correlation": 0.011,
+          "n": 115
+        },
+        "cross_asset": {
+          "avgWin": 7.08,
+          "avgLoss": 7.68,
+          "delta": -0.6,
+          "correlation": -0.043,
+          "n": 112
+        }
+      },
+      "conditionalPerformance": {
+        "5m_trend×NEUTRAL": {
+          "correct": 51,
+          "total": 60,
+          "accuracy": 0.85
+        },
+        "5m_trend×MIDMORNING": {
+          "correct": 50,
+          "total": 69,
+          "accuracy": 0.725
+        },
+        "delta×NEUTRAL": {
+          "correct": 51,
+          "total": 60,
+          "accuracy": 0.85
+        },
+        "delta×MIDMORNING": {
+          "correct": 50,
+          "total": 70,
+          "accuracy": 0.714
+        },
+        "15m_trend×NEUTRAL": {
+          "correct": 11,
+          "total": 20,
+          "accuracy": 0.55
+        },
+        "15m_trend×MIDMORNING": {
+          "correct": 14,
+          "total": 34,
+          "accuracy": 0.412
+        },
+        "vix_trend×NEUTRAL": {
+          "correct": 3,
+          "total": 8,
+          "accuracy": 0.375
+        },
+        "vix_trend×MIDMORNING": {
+          "correct": 7,
+          "total": 22,
+          "accuracy": 0.318
+        },
+        "nq_div×NEUTRAL": {
+          "correct": 12,
+          "total": 22,
+          "accuracy": 0.545
+        },
+        "nq_div×MIDMORNING": {
+          "correct": 14,
+          "total": 33,
+          "accuracy": 0.424
+        },
+        "5m_trend×RANGING": {
+          "correct": 23,
+          "total": 48,
+          "accuracy": 0.479
+        },
+        "15m_trend×RANGING": {
+          "correct": 23,
+          "total": 51,
+          "accuracy": 0.451
+        },
+        "delta×RANGING": {
+          "correct": 30,
+          "total": 68,
+          "accuracy": 0.441
+        },
+        "tick_flow×RANGING": {
+          "correct": 23,
+          "total": 45,
+          "accuracy": 0.511
+        },
+        "tick_flow×MIDMORNING": {
+          "correct": 4,
+          "total": 8,
+          "accuracy": 0.5
+        },
+        "vix_trend×RANGING": {
+          "correct": 23,
+          "total": 55,
+          "accuracy": 0.418
+        },
+        "nq_div×RANGING": {
+          "correct": 29,
+          "total": 67,
+          "accuracy": 0.433
+        },
+        "tick_mom×RANGING": {
+          "correct": 19,
+          "total": 46,
+          "accuracy": 0.413
+        },
+        "tick_mom×MIDMORNING": {
+          "correct": 2,
+          "total": 8,
+          "accuracy": 0.25
+        },
+        "risk_sent×RANGING": {
+          "correct": 3,
+          "total": 10,
+          "accuracy": 0.3
+        },
+        "risk_sent×MIDMORNING": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0
+        },
+        "vix_trend×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 21,
+          "accuracy": 0.571
+        },
+        "nq_div×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 21,
+          "accuracy": 0.571
+        },
+        "tick_mom×MIDDAY_CHOP": {
+          "correct": 6,
+          "total": 11,
+          "accuracy": 0.545
+        },
+        "5m_trend×CLOSE_RUSH": {
+          "correct": 8,
+          "total": 14,
+          "accuracy": 0.571
+        },
+        "delta×CLOSE_RUSH": {
+          "correct": 11,
+          "total": 24,
+          "accuracy": 0.458
+        },
+        "tick_flow×CLOSE_RUSH": {
+          "correct": 9,
+          "total": 20,
+          "accuracy": 0.45
+        },
+        "nq_div×CLOSE_RUSH": {
+          "correct": 14,
+          "total": 34,
+          "accuracy": 0.412
+        },
+        "tick_mom×CLOSE_RUSH": {
+          "correct": 7,
+          "total": 18,
+          "accuracy": 0.389
+        },
+        "15m_trend×CLOSE_RUSH": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.429
+        },
+        "cum_delta×RANGING": {
+          "correct": 10,
+          "total": 19,
+          "accuracy": 0.526
+        },
+        "cum_delta×CLOSE_RUSH": {
+          "correct": 1,
+          "total": 5,
+          "accuracy": 0.2
+        },
+        "5m_trend×OPEN_RUSH": {
+          "correct": 7,
+          "total": 11,
+          "accuracy": 0.636
+        },
+        "delta×OPEN_RUSH": {
+          "correct": 9,
+          "total": 16,
+          "accuracy": 0.563
+        },
+        "tick_flow×NEUTRAL": {
+          "correct": 4,
+          "total": 5,
+          "accuracy": 0.8
+        },
+        "tick_flow×OPEN_RUSH": {
+          "correct": 8,
+          "total": 13,
+          "accuracy": 0.615
+        },
+        "tick_mom×NEUTRAL": {
+          "correct": 4,
+          "total": 6,
+          "accuracy": 0.667
+        },
+        "tick_mom×OPEN_RUSH": {
+          "correct": 8,
+          "total": 15,
+          "accuracy": 0.533
+        },
+        "15m_trend×OPEN_RUSH": {
+          "correct": 5,
+          "total": 11,
+          "accuracy": 0.455
+        },
+        "risk_sent×OPEN_RUSH": {
+          "correct": 3,
+          "total": 6,
+          "accuracy": 0.5
+        },
+        "vix_struct×RANGING": {
+          "correct": 29,
+          "total": 60,
+          "accuracy": 0.483
+        },
+        "vix_struct×OPEN_RUSH": {
+          "correct": 8,
+          "total": 15,
+          "accuracy": 0.533
+        },
+        "cum_delta×OPEN_RUSH": {
+          "correct": 8,
+          "total": 12,
+          "accuracy": 0.667
+        },
+        "nq_div×OPEN_RUSH": {
+          "correct": 1,
+          "total": 1,
+          "accuracy": 1
+        },
+        "vix_struct×NEUTRAL": {
+          "correct": 10,
+          "total": 20,
+          "accuracy": 0.5
+        },
+        "cum_delta×NEUTRAL": {
+          "correct": 8,
+          "total": 13,
+          "accuracy": 0.615
+        },
+        "vix_struct×MIDMORNING": {
+          "correct": 12,
+          "total": 26,
+          "accuracy": 0.462
+        },
+        "cum_delta×MIDMORNING": {
+          "correct": 7,
+          "total": 13,
+          "accuracy": 0.538
+        },
+        "5m_trend×MIDDAY_CHOP": {
+          "correct": 9,
+          "total": 14,
+          "accuracy": 0.643
+        },
+        "15m_trend×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 19,
+          "accuracy": 0.632
+        },
+        "delta×MIDDAY_CHOP": {
+          "correct": 11,
+          "total": 18,
+          "accuracy": 0.611
+        },
+        "tick_flow×MIDDAY_CHOP": {
+          "correct": 6,
+          "total": 9,
+          "accuracy": 0.667
+        },
+        "risk_sent×MIDDAY_CHOP": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0
+        },
+        "vix_struct×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 19,
+          "accuracy": 0.632
+        },
+        "cum_delta×MIDDAY_CHOP": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1
+        },
+        "vix_trend×CLOSE_RUSH": {
+          "correct": 7,
+          "total": 20,
+          "accuracy": 0.35
+        },
+        "vix_struct×CLOSE_RUSH": {
+          "correct": 7,
+          "total": 20,
+          "accuracy": 0.35
+        }
+      }
+    },
+    "allTime": {
+      "trades": 153,
+      "signalAccuracy": {
+        "5m_trend": {
+          "total": 124,
+          "votedWithDir": 108,
+          "correct": 74,
+          "accuracy": 0.6851851851851852
+        },
+        "delta": {
+          "total": 153,
+          "votedWithDir": 128,
+          "correct": 81,
+          "accuracy": 0.6328125
+        },
+        "tick_flow": {
+          "total": 120,
+          "votedWithDir": 50,
+          "correct": 27,
+          "accuracy": 0.54
+        },
+        "15m_trend": {
+          "total": 79,
+          "votedWithDir": 71,
+          "correct": 34,
+          "accuracy": 0.4788732394366197
+        },
+        "vix_trend": {
+          "total": 70,
+          "votedWithDir": 63,
+          "correct": 26,
+          "accuracy": 0.4126984126984127
+        },
+        "nq_div": {
+          "total": 94,
+          "votedWithDir": 89,
+          "correct": 41,
+          "accuracy": 0.4606741573033708
+        },
+        "vix_struct": {
+          "total": 115,
+          "votedWithDir": 80,
+          "correct": 39,
+          "accuracy": 0.4875
+        },
+        "cum_delta": {
+          "total": 86,
+          "votedWithDir": 32,
+          "correct": 18,
+          "accuracy": 0.5625
+        },
+        "tick_mom": {
+          "total": 74,
+          "votedWithDir": 52,
+          "correct": 23,
+          "accuracy": 0.4423076923076923
+        },
+        "risk_sent": {
+          "total": 12,
+          "votedWithDir": 10,
+          "correct": 3,
+          "accuracy": 0.3
+        }
+      },
+      "layerCorrelation": {
+        "macro": {
+          "avgWin": 3.8,
+          "avgLoss": -2.21,
+          "delta": 6.01,
+          "correlation": 0.501,
+          "n": 149
+        },
+        "futures": {
+          "avgWin": 12.13,
+          "avgLoss": 13.85,
+          "delta": -1.72,
+          "correlation": -0.069,
+          "n": 153
+        },
+        "micro": {
+          "avgWin": 11.83,
+          "avgLoss": 9.96,
+          "delta": 1.87,
+          "correlation": 0.104,
+          "n": 153
+        },
+        "tick": {
+          "avgWin": 14.2,
+          "avgLoss": 18.51,
+          "delta": -4.31,
+          "correlation": -0.127,
+          "n": 153
+        },
+        "execution": {
+          "avgWin": 12.44,
+          "avgLoss": 12.27,
+          "delta": 0.17,
+          "correlation": 0.011,
+          "n": 115
+        },
+        "cross_asset": {
+          "avgWin": 7.08,
+          "avgLoss": 7.68,
+          "delta": -0.6,
+          "correlation": -0.043,
+          "n": 112
+        }
+      },
+      "conditionalPerformance": {
+        "5m_trend×NEUTRAL": {
+          "correct": 51,
+          "total": 60,
+          "accuracy": 0.85
+        },
+        "5m_trend×MIDMORNING": {
+          "correct": 50,
+          "total": 69,
+          "accuracy": 0.725
+        },
+        "delta×NEUTRAL": {
+          "correct": 51,
+          "total": 60,
+          "accuracy": 0.85
+        },
+        "delta×MIDMORNING": {
+          "correct": 50,
+          "total": 70,
+          "accuracy": 0.714
+        },
+        "15m_trend×NEUTRAL": {
+          "correct": 11,
+          "total": 20,
+          "accuracy": 0.55
+        },
+        "15m_trend×MIDMORNING": {
+          "correct": 14,
+          "total": 34,
+          "accuracy": 0.412
+        },
+        "vix_trend×NEUTRAL": {
+          "correct": 3,
+          "total": 8,
+          "accuracy": 0.375
+        },
+        "vix_trend×MIDMORNING": {
+          "correct": 7,
+          "total": 22,
+          "accuracy": 0.318
+        },
+        "nq_div×NEUTRAL": {
+          "correct": 12,
+          "total": 22,
+          "accuracy": 0.545
+        },
+        "nq_div×MIDMORNING": {
+          "correct": 14,
+          "total": 33,
+          "accuracy": 0.424
+        },
+        "5m_trend×RANGING": {
+          "correct": 23,
+          "total": 48,
+          "accuracy": 0.479
+        },
+        "15m_trend×RANGING": {
+          "correct": 23,
+          "total": 51,
+          "accuracy": 0.451
+        },
+        "delta×RANGING": {
+          "correct": 30,
+          "total": 68,
+          "accuracy": 0.441
+        },
+        "tick_flow×RANGING": {
+          "correct": 23,
+          "total": 45,
+          "accuracy": 0.511
+        },
+        "tick_flow×MIDMORNING": {
+          "correct": 4,
+          "total": 8,
+          "accuracy": 0.5
+        },
+        "vix_trend×RANGING": {
+          "correct": 23,
+          "total": 55,
+          "accuracy": 0.418
+        },
+        "nq_div×RANGING": {
+          "correct": 29,
+          "total": 67,
+          "accuracy": 0.433
+        },
+        "tick_mom×RANGING": {
+          "correct": 19,
+          "total": 46,
+          "accuracy": 0.413
+        },
+        "tick_mom×MIDMORNING": {
+          "correct": 2,
+          "total": 8,
+          "accuracy": 0.25
+        },
+        "risk_sent×RANGING": {
+          "correct": 3,
+          "total": 10,
+          "accuracy": 0.3
+        },
+        "risk_sent×MIDMORNING": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0
+        },
+        "vix_trend×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 21,
+          "accuracy": 0.571
+        },
+        "nq_div×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 21,
+          "accuracy": 0.571
+        },
+        "tick_mom×MIDDAY_CHOP": {
+          "correct": 6,
+          "total": 11,
+          "accuracy": 0.545
+        },
+        "5m_trend×CLOSE_RUSH": {
+          "correct": 8,
+          "total": 14,
+          "accuracy": 0.571
+        },
+        "delta×CLOSE_RUSH": {
+          "correct": 11,
+          "total": 24,
+          "accuracy": 0.458
+        },
+        "tick_flow×CLOSE_RUSH": {
+          "correct": 9,
+          "total": 20,
+          "accuracy": 0.45
+        },
+        "nq_div×CLOSE_RUSH": {
+          "correct": 14,
+          "total": 34,
+          "accuracy": 0.412
+        },
+        "tick_mom×CLOSE_RUSH": {
+          "correct": 7,
+          "total": 18,
+          "accuracy": 0.389
+        },
+        "15m_trend×CLOSE_RUSH": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.429
+        },
+        "cum_delta×RANGING": {
+          "correct": 10,
+          "total": 19,
+          "accuracy": 0.526
+        },
+        "cum_delta×CLOSE_RUSH": {
+          "correct": 1,
+          "total": 5,
+          "accuracy": 0.2
+        },
+        "5m_trend×OPEN_RUSH": {
+          "correct": 7,
+          "total": 11,
+          "accuracy": 0.636
+        },
+        "delta×OPEN_RUSH": {
+          "correct": 9,
+          "total": 16,
+          "accuracy": 0.563
+        },
+        "tick_flow×NEUTRAL": {
+          "correct": 4,
+          "total": 5,
+          "accuracy": 0.8
+        },
+        "tick_flow×OPEN_RUSH": {
+          "correct": 8,
+          "total": 13,
+          "accuracy": 0.615
+        },
+        "tick_mom×NEUTRAL": {
+          "correct": 4,
+          "total": 6,
+          "accuracy": 0.667
+        },
+        "tick_mom×OPEN_RUSH": {
+          "correct": 8,
+          "total": 15,
+          "accuracy": 0.533
+        },
+        "15m_trend×OPEN_RUSH": {
+          "correct": 5,
+          "total": 11,
+          "accuracy": 0.455
+        },
+        "risk_sent×OPEN_RUSH": {
+          "correct": 3,
+          "total": 6,
+          "accuracy": 0.5
+        },
+        "vix_struct×RANGING": {
+          "correct": 29,
+          "total": 60,
+          "accuracy": 0.483
+        },
+        "vix_struct×OPEN_RUSH": {
+          "correct": 8,
+          "total": 15,
+          "accuracy": 0.533
+        },
+        "cum_delta×OPEN_RUSH": {
+          "correct": 8,
+          "total": 12,
+          "accuracy": 0.667
+        },
+        "nq_div×OPEN_RUSH": {
+          "correct": 1,
+          "total": 1,
+          "accuracy": 1
+        },
+        "vix_struct×NEUTRAL": {
+          "correct": 10,
+          "total": 20,
+          "accuracy": 0.5
+        },
+        "cum_delta×NEUTRAL": {
+          "correct": 8,
+          "total": 13,
+          "accuracy": 0.615
+        },
+        "vix_struct×MIDMORNING": {
+          "correct": 12,
+          "total": 26,
+          "accuracy": 0.462
+        },
+        "cum_delta×MIDMORNING": {
+          "correct": 7,
+          "total": 13,
+          "accuracy": 0.538
+        },
+        "5m_trend×MIDDAY_CHOP": {
+          "correct": 9,
+          "total": 14,
+          "accuracy": 0.643
+        },
+        "15m_trend×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 19,
+          "accuracy": 0.632
+        },
+        "delta×MIDDAY_CHOP": {
+          "correct": 11,
+          "total": 18,
+          "accuracy": 0.611
+        },
+        "tick_flow×MIDDAY_CHOP": {
+          "correct": 6,
+          "total": 9,
+          "accuracy": 0.667
+        },
+        "risk_sent×MIDDAY_CHOP": {
+          "correct": 0,
+          "total": 2,
+          "accuracy": 0
+        },
+        "vix_struct×MIDDAY_CHOP": {
+          "correct": 12,
+          "total": 19,
+          "accuracy": 0.632
+        },
+        "cum_delta×MIDDAY_CHOP": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1
+        },
+        "vix_trend×CLOSE_RUSH": {
+          "correct": 7,
+          "total": 20,
+          "accuracy": 0.35
+        },
+        "vix_struct×CLOSE_RUSH": {
+          "correct": 7,
+          "total": 20,
+          "accuracy": 0.35
+        }
+      }
+    }
+  },
+  "activeWeights": {
+    "layerWeights": {
+      "macro": 1.5,
+      "futures": 0.93,
+      "micro": 1.1,
+      "tick": 0.87,
+      "execution": 1.01,
+      "cross_asset": 0.96
+    },
+    "signalWeights": {
+      "5m_trend": 1.37,
+      "delta": 1.27,
+      "tick_flow": 1.08,
+      "15m_trend": 0.96,
+      "vix_trend": 0.83,
+      "nq_div": 0.92,
+      "vix_struct": 0.97,
+      "cum_delta": 1.13,
+      "tick_mom": 0.88
+    },
+    "sufficient": true,
+    "totalTrades": 153
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+.env
+
+# Runtime cache — holds session token and account ID
+data/settings.json
+
+# FinBERT weights (~418MB each) — download from https://huggingface.co/ProsusAI/finbert
+model/finbert/pytorch_model.bin
+model/finbert/onnx/model.onnx

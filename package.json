@@ -1,0 +1,25 @@
+{
+  "name": "meridian-system",
+  "version": "19.0.0",
+  "description": "Standalone autonomous futures scalping system for TopstepX",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test:auth": "node -e \"const ts=require('./src/api/topstepx'); ts.authenticate().then(r=>console.log('Auth:',r.success?'OK (token='+r.token.substring(0,12)+'...)':r.errorCode||r.error))\"",
+    "test:db": "node -e \"const db=require('./src/storage/db'); db.setSetting('test','ok'); console.log('DB:', db.getSetting('test'))\"",
+    "test:rollover": "node -e \"const {getExpectedContractId}=require('./index'); const D=(y,m,d)=>new Date(y,m-1,d); const cases=[[D(2026,2,20),'2026-02-20','H26'],[D(2026,3,15),'2026-03-15','H26'],[D(2026,3,16),'2026-03-16','M26'],[D(2026,3,17),'2026-03-17','M26'],[D(2026,6,15),'2026-06-15','U26'],[D(2026,9,14),'2026-09-14','Z26'],[D(2026,12,14),'2026-12-14','H27']]; let pass=0,fail=0; cases.forEach(([dt,label,exp])=>{const got=getExpectedContractId(dt); const ok=got.endsWith(exp); console.log((ok?'✅':'❌'),label,'→ expected',exp,'got',got.split('.').pop()); ok?pass++:fail++;}); console.log(pass+'/'+(pass+fail),'passed');\"",
+    "test:quote": "node -e \"const qs=require('./src/api/quote-stream'),db=require('./src/storage/db'); (async()=>{const tok=db.getSetting('sessionToken'),cid=db.getSetting('selectedContractId')||'CON.F.US.MES.H26'; if(!tok){console.error('No session token — run test:auth first');process.exit(1);} console.log('Connecting to SignalR hub for',cid,'...'); await qs.start(cid,tok); await new Promise(r=>setTimeout(r,8000)); const q=qs.getLatestQuote(); console.log(q?'✅ Quote received:':' No quote after 8s (hub method may need adjustment):', q); qs.stop();})();\"",
+    "backtest": "node src/backtesting/backtest.js",
+    "backtest:large": "node src/backtesting/backtest.js --bars=5000",
+    "test:unit": "node test/unit.js"
+  },
+  "dependencies": {
+    "@microsoft/signalr": "^8.0.0",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^2.7.0",
+    "onnxruntime-node": "^1.24.2",
+    "puppeteer": "^22.0.0"
+  }
+}
